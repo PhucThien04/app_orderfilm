@@ -11,7 +11,7 @@
     <!-- Trạng thái bình thường -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#F44336" /> <!-- Màu đỏ bình thường -->
+            <solid android:color="#B22A38" /> <!-- Màu đỏ bình thường -->
             <corners android:radius="16dp" /> <!-- Bo góc 16dp -->
         </shape>
     </item>
