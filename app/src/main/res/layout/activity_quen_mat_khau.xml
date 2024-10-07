@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/afacad"
-            android:text="Đăng nhập"
+            android:text="Quên mật khẩu"
             android:textColor="@color/white"
             android:textSize="32sp"
             android:layout_gravity="center"/>
@@ -47,31 +47,21 @@
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:hint="Số điện thoại hoặc Email"
-            android:padding="12dp"
-            android:background="@drawable/input_text"
-            android:gravity="left"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/afacad"/>
-        <EditText
-            android:layout_width="340dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Nhập mật khẩu"
+            android:hint="Nhập Email của bạn"
             android:padding="12dp"
             android:background="@drawable/input_text"
             android:gravity="left"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:fontFamily="@font/afacad"
-            android:inputType="textPassword"/>
+            android:inputType="textEmailAddress"/>
+
 
         <Button
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Đăng nhập"
+            android:text="Lấy lại mật khẩu"
             android:padding="12dp"
             android:background="@drawable/btn_back_red"
             android:textSize="20sp"
@@ -99,6 +89,7 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/afacad"
                 android:letterSpacing="0.1"/>
+
 
         </LinearLayout>
 
