@@ -155,6 +155,5 @@
             android:textColor="@color/white"
             android:background="@drawable/btn_back_red"
             android:layout_gravity="end"/>
-
     </LinearLayout>
 </LinearLayout>
