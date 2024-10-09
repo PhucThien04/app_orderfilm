@@ -36,4 +36,15 @@
 
     </RelativeLayout>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/lotte_cinema_pico"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/img_border">
+
+
+    </ImageView>
+
 </LinearLayout>
