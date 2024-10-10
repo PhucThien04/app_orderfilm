@@ -1,12 +1,19 @@
 package com.example.app_order;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestBuilder;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 
 public class ThongTinCongTy extends AppCompatActivity {
 
@@ -20,5 +27,11 @@ public class ThongTinCongTy extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageView imgView = findViewById(R.id.imgCinema);
+
+        Glide.with(this).load(R.drawable.lotte_cinema_pico)
+                .apply(new RequestOptions().transform(new CenterCrop()).transform(new RoundedCorners(50)))
+                .into(imgView);
     }
 }
