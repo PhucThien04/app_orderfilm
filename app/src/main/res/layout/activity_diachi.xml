@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiachiActivity"
+    android:orientation="vertical">
+
+    <!-- Ô chứa tiêu đề và nút quay lại -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#B22A38"
+        android:padding="16dp">
+
+        <!-- Nút quay lại -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="#FFFFFF" />
+
+        <!-- TextView tiêu đề -->
+        <TextView
+            android:id="@+id/tvTieude"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/afacad_bold"
+            android:gravity="center"
+            android:text="ĐỊA CHỈ"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <!-- ScrollView chứa nội dung địa chỉ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Địa chỉ -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ:"
+                android:fontFamily="@font/afacad_bold"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="   Tầng 7, Cantavil Premier, Số 1 đường Song Hành, Xa lộ Hà Nội, P.An Phú, Q.2, TP.HCM, Việt Nam."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="16dp" />
+
+            <!-- Nơi đỗ xe -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nơi đỗ xe:"
+                android:fontFamily="@font/afacad_bold"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Xe mô tô: Quý khách có thể giữ xe tại tầng hầm B1 của tòa nhà Cantavil Premier phía mặt đường Song Hành (hướng cổng vô nằm cạnh cửa hàng Bread Talk).\n   Phí giữ xe là 5,000VNĐ."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Xe ô tô: Quý khách có thể giữ xe ở phía sau tòa nhà hoặc dưới tầng hầm B2 (hướng cổng vô nằm cạnh cửa hàng Bread Talk)."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Tuyến xe buýt:\nCác tuyến đi ngang Lotte Cinema Cantavil\nTuyến 06 (Bến xe ĐH Nông Lâm - Bến xe Chợ Lớn)\nTuyến 56 (Bến xe ĐH Giao Thông Vận Tải - Bến xe Chợ Lớn)\nTuyến 150 (Bến xe Chợ Lớn - Ngã 3 Tân Vạn)\nTuyến 104 (Bến xe ĐH Nông Lâm - Bến xe An Sương)\nTuyến số 10, 12, 30, ..."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="16dp" />
+
+            <!-- Tiện ích đi kèm -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tiện ích đi kèm:"
+                android:fontFamily="@font/afacad_bold"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Siêu thị Big C."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Nhà Hàng: Lotteria, Cơm tấm California, Don Chicken, D'Maris, Lẩu Công Chúa, ..."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Cà Phê: Highlands Coffee, The Coffee House, ..."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Mua sắm: Aldo, Nike, Vascara, Adidas, Mĩ phẩm Skinfood, The Face shop,Yves Rocher, Casio, PNJ, SJC, Lancome, ..."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Điện tử: Xiaomi."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Y tế: Trung tâm tiêm chủng INC."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Tiện ích khác: Play Game, ..."
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
