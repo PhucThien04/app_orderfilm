@@ -64,7 +64,8 @@
                             android:text="MỘ ĐOM ĐÓM"
                             android:textSize="18sp"
                             android:textColor="#FFFFFF"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieDuration_1"
@@ -73,7 +74,8 @@
                             android:text="Thời lượng: 90 phút"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="4dp" />
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieReleaseDate_1"
@@ -82,7 +84,8 @@
                             android:text="Khởi chiếu: D-3"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieGenre_1"
@@ -91,7 +94,8 @@
                             android:text="Thể loại: Animation"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <!-- Buy Ticket Button -->
                         <Button
@@ -99,6 +103,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Mua vé ngay"
+                            android:fontFamily="@font/afacad"
                             android:background="@drawable/bg_button_red"
                             android:textColor="#FFFFFF"
                             android:padding="10dp"
@@ -142,7 +147,8 @@
                             android:text="MA DA"
                             android:textSize="18sp"
                             android:textColor="#FFFFFF"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieDuration_2"
@@ -151,7 +157,8 @@
                             android:text="Thời lượng: 95 phút"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="4dp" />
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieReleaseDate_2"
@@ -160,7 +167,8 @@
                             android:text="Khởi chiếu: D-3"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieGenre_2"
@@ -169,7 +177,8 @@
                             android:text="Thể loại: Horror"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <!-- Buy Ticket Button -->
                         <Button
@@ -177,6 +186,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Đã lên lịch"
+                            android:fontFamily="@font/afacad"
                             android:background="@drawable/bg_button_red"
                             android:textColor="#FFFFFF"
                             android:padding="10dp"
@@ -219,7 +229,8 @@
                             android:text="LÀM GIÀU VỚI MA"
                             android:textSize="18sp"
                             android:textColor="#FFFFFF"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieDuration_3"
@@ -228,7 +239,8 @@
                             android:text="Thời lượng: 115 phút"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="4dp" />
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieReleaseDate_3"
@@ -237,7 +249,8 @@
                             android:text="Khởi chiếu: D-3"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieGenre_3"
@@ -246,7 +259,8 @@
                             android:text="Thể loại: Comedy"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <!-- Buy Ticket Button -->
                         <Button
@@ -254,6 +268,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Mua vé ngay"
+                            android:fontFamily="@font/afacad"
                             android:background="@drawable/bg_button_red"
                             android:textColor="#FFFFFF"
                             android:padding="10dp"
@@ -297,7 +312,8 @@
                             android:text="ROBOT HOANG DÃ"
                             android:textSize="18sp"
                             android:textColor="#FFFFFF"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieDuration_4"
@@ -306,7 +322,8 @@
                             android:text="Thời lượng: 102 phút"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="4dp" />
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieReleaseDate_4"
@@ -315,7 +332,8 @@
                             android:text="Khởi chiếu: D-3"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieGenre_4"
@@ -324,7 +342,8 @@
                             android:text="Thể loại: Animation"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <!-- Buy Ticket Button -->
                         <Button
@@ -332,6 +351,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Đã lên lịch"
+                            android:fontFamily="@font/afacad"
                             android:background="@drawable/bg_button_red"
                             android:textColor="#FFFFFF"
                             android:padding="10dp"
@@ -375,7 +395,8 @@
                             android:text="TRÊU RỒI YÊU"
                             android:textSize="18sp"
                             android:textColor="#FFFFFF"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieDuration_5"
@@ -384,7 +405,8 @@
                             android:text="Thời lượng: 119 phút"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="4dp" />
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieReleaseDate_5"
@@ -393,7 +415,8 @@
                             android:text="Khởi chiếu: D-3"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <TextView
                             android:id="@+id/tvMovieGenre_5"
@@ -402,7 +425,8 @@
                             android:text="Thể loại: Comedy, Romance"
                             android:textSize="14sp"
                             android:textColor="#CCCCCC"
-                            android:layout_marginTop="2dp" />
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
 
                         <!-- Buy Ticket Button -->
                         <Button
@@ -410,6 +434,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Đã lên lịch"
+                            android:fontFamily="@font/afacad"
                             android:background="@drawable/bg_button_red"
                             android:textColor="#FFFFFF"
                             android:padding="10dp"
