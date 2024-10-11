@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RapphimActivity"
+    android:orientation="vertical">
+
+    <!-- Ô chứa tiêu đề và nút quay lại -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#B22A38"
+        android:padding="16dp">
+
+        <!-- Nút quay lại -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="#FFFFFF" />
+
+        <!-- TextView tiêu đề -->
+        <TextView
+            android:id="@+id/tvTieude"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/afacad_bold"
+            android:gravity="center"
+            android:text="MUA VÉ"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <!-- ListView cho thành phố (vùng) và các rạp tương ứng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- ListView cho vùng -->
+        <ListView
+            android:id="@+id/lvVung"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:dividerHeight="1dp" />
+
+        <!-- ListView cho các rạp tương ứng -->
+        <ListView
+            android:id="@+id/lvRap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:dividerHeight="1dp"
+            android:background="#FFF8E1" />
+    </LinearLayout>
+
+    <!-- Nút Tiếp tục -->
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#B22A38"
+        android:text="Tiếp tục"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:padding="16dp" />
+</LinearLayout>
