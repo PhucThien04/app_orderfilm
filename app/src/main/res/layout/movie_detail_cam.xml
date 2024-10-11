@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#1a1a2e"
+    android:id="@+id/movie_detail_cam">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="#FFFFFF" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="CÁM"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:fontFamily="@font/afacad"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#1E1E2F"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Movie Image -->
+        <ImageView
+            android:id="@+id/imgMovie_1"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cam" />
+
+        <!-- Movie Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvMovieDuration_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời lượng: 122 phút"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/afacad"/>
+
+            <TextView
+                android:id="@+id/tvMovieReleaseDate_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khởi chiếu: 20/09/2024"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/afacad"/>
+
+            <TextView
+                android:id="@+id/tvMovieGenre_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thể loại: Thriller/Criminal/Horror"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/afacad"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xếp hạng:"
+                    android:textColor="#CCCCCC"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/afacad"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ★★★★☆ "
+                    android:textColor="#FFD700"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/text_movie_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8.0"
+                    android:textColor="#CCCCCC"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/afacad"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tóm tắt"
+        android:fontFamily="@font/afacad"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_movie_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Một phiên bản đen tối và mới lạ dựa trên câu chuyện cổ tích quen thuộc. Thay vì chỉ xoay quanh sự xấu xa của Cám như trong nguyên tác, phim đào sâu vào sự phát triển tâm lý của Cám, biến cô từ một cô gái hiền lành trở thành một nhân vật đầy thù hận và đen tối. Cốt truyện khai thác lời nguyền cổ xưa, với nhiều chi tiết rùng rợn như lễ hiến sinh, sự xuất hiện của ác linh và quỷ ba mắt. Phim còn thay đổi một số chi tiết quen thuộc: nhân vật Tấm trở nên bí ẩn và phức tạp hơn, ông Bụt không còn là vị thần tốt lành mà trở thành một thực thể đen tối. Những yếu tố kinh dị như lột da người, ma thuật đen và các nghi lễ quỷ dị được lồng ghép khéo léo, tạo nên bầu không khí u ám, ma mị."
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/afacad"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/button_book_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đặt vé"
+        android:background="@drawable/bg_button_red"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/afacad"/>
+
+</LinearLayout>

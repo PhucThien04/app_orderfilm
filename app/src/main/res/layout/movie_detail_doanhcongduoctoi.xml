@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#1a1a2e"
+    android:id="@+id/movie_detail_cam">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="#FFFFFF" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="ĐỐ ANH CÒNG ĐƯỢC TÔI"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:fontFamily="@font/afacad"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#1E1E2F"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Movie Image -->
+        <ImageView
+            android:id="@+id/imgMovie_1"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/doanhcongduoctoi" />
+
+        <!-- Movie Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvMovieDuration_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời lượng: 122 phút"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/afacad"/>
+
+            <TextView
+                android:id="@+id/tvMovieReleaseDate_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khởi chiếu: 20/09/2024"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/afacad"/>
+
+            <TextView
+                android:id="@+id/tvMovieGenre_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thể loại: Action/Adventure/SF"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/afacad"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xếp hạng:"
+                    android:textColor="#CCCCCC"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/afacad"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ★★★★★ "
+                    android:textColor="#FFD700"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/text_movie_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9.1"
+                    android:textColor="#CCCCCC"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/afacad"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tóm tắt"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:fontFamily="@font/afacad"/>
+
+    <TextView
+        android:id="@+id/text_movie_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Các thanh tra kỳ cựu nổi tiếng đã hoạt động trở lại! Thám tử Seo Do-cheol (HWANG Jung-min) và đội điều tra tội phạm nguy hiểm của anh không ngừng truy lùng tội phạm cả ngày lẫn đêm, đặt cược cả cuộc sống cá nhân của họ. Nhận một vụ án sát hại một giáo sư, đội thanh tra nhận ra những mối liên hệ với các vụ án trong quá khứ và nảy sinh những nghi ngờ về một kẻ giết người hàng loạt. Điều này đã khiến cả nước rơi vào tình trạng hỗn loạn. Khi đội thanh tra đi sâu vào cuộc điều tra, kẻ sát nhân đã chế nhạo họ bằng cách công khai tung ra một đoạn giới thiệu trực tuyến, chỉ ra nạn nhân tiếp theo và làm gia tăng sự hỗn loạn. Để giải quyết mối đe dọa ngày càng leo thang, nhóm đã kết nạp một sĩ quan tân binh trẻ Park Sun-woo (JUNG Hae-in), dẫn đến những khúc mắc và đầy rẫy bất ngờ trong vụ án."
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/afacad"/>
+
+    <Button
+        android:id="@+id/button_book_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đặt vé"
+        android:fontFamily="@font/afacad"
+        android:background="@drawable/bg_button_red"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+</LinearLayout>

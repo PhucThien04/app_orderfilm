@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Now_Showing">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="#1a1a2e">
+
+        <!-- Slider -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerSlider_nowshowing"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Scrollable Movie List -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Movie Item 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#1E1E2F"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal">
+
+                    <!-- Movie Image -->
+                    <ImageView
+                        android:id="@+id/imgMovie_1"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cam" />
+
+                    <!-- Movie Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvMovieTitle_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CÁM"
+                            android:textSize="18sp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieDuration_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thời lượng: 122 phút"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieReleaseDate_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Khởi chiếu: 20/09/2024"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieGenre_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại: Thriller/Criminal/Horror"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <!-- Buy Ticket Button -->
+                        <Button
+                            android:id="@+id/btnBuyTicket_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mua vé ngay"
+                            android:fontFamily="@font/afacad"
+                            android:background="@drawable/bg_button_red"
+                            android:textColor="#FFFFFF"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Movie Item 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#1E1E2F"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal">
+
+                    <!-- Movie Image -->
+                    <ImageView
+                        android:id="@+id/imgMovie_2"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/doanhcongduoctoi" />
+
+                    <!-- Movie Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvMovieTitle_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ĐỐ ANH CÒNG ĐƯỢC TÔI"
+                            android:textSize="18sp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieDuration_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thời lượng: 118 phút"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieReleaseDate_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Khởi chiếu: 27/09/2024"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieGenre_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại: Action"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <!-- Buy Ticket Button -->
+                        <Button
+                            android:id="@+id/btnBuyTicket_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mua vé ngay"
+                            android:fontFamily="@font/afacad"
+                            android:background="@drawable/bg_button_red"
+                            android:textColor="#FFFFFF"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Movie Item 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#1E1E2F"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal">
+
+                    <!-- Movie Image -->
+                    <ImageView
+                        android:id="@+id/imgMovie_3"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/caubecaheo" />
+
+                    <!-- Movie Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvMovieTitle_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CẬU BÉ CÁ HEO"
+                            android:textSize="18sp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieDuration_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thời lượng: 85 phút"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieReleaseDate_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Khởi chiếu: 27/09/2024"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieGenre_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại: Animation"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <!-- Buy Ticket Button -->
+                        <Button
+                            android:id="@+id/btnBuyTicket_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mua vé ngay"
+                            android:fontFamily="@font/afacad"
+                            android:background="@drawable/bg_button_red"
+                            android:textColor="#FFFFFF"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Movie Item 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#1E1E2F"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal">
+
+                    <!-- Movie Image -->
+                    <ImageView
+                        android:id="@+id/imgMovie_4"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hanhtrinhsolo" />
+
+                    <!-- Movie Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvMovieTitle_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HÀNH TRÌNH SOLO"
+                            android:textSize="18sp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieDuration_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thời lượng: 94 phút"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieReleaseDate_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Khởi chiếu: 20/09/2024"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieGenre_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại: Musical"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <!-- Buy Ticket Button -->
+                        <Button
+                            android:id="@+id/btnBuyTicket_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mua vé ngay"
+                            android:fontFamily="@font/afacad"
+                            android:background="@drawable/bg_button_red"
+                            android:textColor="#FFFFFF"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Movie Item 5 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#1E1E2F"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal">
+
+                    <!-- Movie Image -->
+                    <ImageView
+                        android:id="@+id/imgMovie_5"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lookback" />
+
+                    <!-- Movie Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvMovieTitle_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="LIỆU TA CÓ DÁM NHÌN LẠI"
+                            android:textSize="18sp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieDuration_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thời lượng: 60 phút"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieReleaseDate_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Khởi chiếu: 20/09/2024"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <TextView
+                            android:id="@+id/tvMovieGenre_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại: Animation"
+                            android:textSize="14sp"
+                            android:textColor="#CCCCCC"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/afacad"/>
+
+                        <!-- Buy Ticket Button -->
+                        <Button
+                            android:id="@+id/btnBuyTicket_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mua vé ngay"
+                            android:fontFamily="@font/afacad"
+                            android:background="@drawable/bg_button_red"
+                            android:textColor="#FFFFFF"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

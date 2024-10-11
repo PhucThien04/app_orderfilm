@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#1a1a2e"
+    android:id="@+id/movie_detail_cam">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="#FFFFFF" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="MỘ ĐOM ĐÓM"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:fontFamily="@font/afacad"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#1E1E2F"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Movie Image -->
+        <ImageView
+            android:id="@+id/imgMovie_1"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/modomdom" />
+
+        <!-- Movie Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvMovieDuration_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời lượng: 122 phút"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/afacad"/>
+
+            <TextView
+                android:id="@+id/tvMovieReleaseDate_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khởi chiếu: 20/09/2024"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/afacad"/>
+
+            <TextView
+                android:id="@+id/tvMovieGenre_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thể loại: Animation"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/afacad"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xếp hạng:"
+                    android:textColor="#CCCCCC"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/afacad"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ★★★★★ "
+                    android:textColor="#FFD700"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/text_movie_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9.1"
+                    android:textColor="#CCCCCC"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/afacad"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tóm tắt"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:fontFamily="@font/afacad"/>
+
+    <TextView
+        android:id="@+id/text_movie_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Một bộ phim hoạt hình Nhật Bản ra mắt năm 1988, do đạo diễn Isao Takahata thực hiện, dựa trên tiểu thuyết cùng tên của Akiyuki Nosaka. Phim kể về hai anh em Seita và Setsuko trong bối cảnh Nhật Bản vào giai đoạn cuối Thế Chiến II. Sau khi mất mẹ do một trận ném bom, hai đứa trẻ phải tự sống sót trong một xã hội đang sụp đổ vì chiến tranh. Seita cố gắng chăm sóc em gái Setsuko trong khi cuộc sống ngày càng khó khăn. Mặc dù nỗ lực hết mình, nhưng vì thiếu thức ăn và sự giúp đỡ, Setsuko yếu dần và cuối cùng qua đời. Seita, sau khi mất em, cũng không thể sống sót. Phim tập trung khắc họa sự đau thương của chiến tranh và sự mất mát từ góc nhìn của trẻ em."
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/afacad"/>
+
+    <Button
+        android:id="@+id/button_book_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đặt vé"
+        android:fontFamily="@font/afacad"
+        android:background="@drawable/bg_button_red"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+</LinearLayout>

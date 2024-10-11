@@ -12,9 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
+
         <activity
-            android:name=".ThongTinCongTy"
-            android:exported="true" >
+            android:name=".ThongTin_CapNhatTaiKhoan"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,15 +24,13 @@
         </activity>
         <activity
             android:name=".DangKy"
-            android:exported="true">
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".QuenMatKhau"
             android:exported="false" />
         <activity
             android:name=".DangNhap"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />

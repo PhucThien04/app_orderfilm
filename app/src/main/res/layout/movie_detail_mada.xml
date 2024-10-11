@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#1a1a2e"
+    android:id="@+id/movie_detail_cam">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="#FFFFFF" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="MA DA"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:fontFamily="@font/afacad"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#1E1E2F"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Movie Image -->
+        <ImageView
+            android:id="@+id/imgMovie_1"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mada" />
+
+        <!-- Movie Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvMovieDuration_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời lượng: 122 phút"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/afacad"/>
+
+            <TextView
+                android:id="@+id/tvMovieReleaseDate_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khởi chiếu: 20/09/2024"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/afacad"/>
+
+            <TextView
+                android:id="@+id/tvMovieGenre_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thể loại: Horror/Thriller"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/afacad"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xếp hạng:"
+                    android:textColor="#CCCCCC"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/afacad"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ★★★★★ "
+                    android:textColor="#FFD700"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/text_movie_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9.1"
+                    android:textColor="#CCCCCC"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/afacad"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tóm tắt"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:fontFamily="@font/afacad"/>
+
+    <TextView
+        android:id="@+id/text_movie_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bộ phim xoay quanh câu chuyện của bà Lệ, một người phụ nữ làm nghề vớt xác bên bờ sông. Câu chuyện bắt đầu khi bà Lệ mất chồng do đuối nước khi đang mang thai bé Nhung. Sau khi chồng bà được vớt lên một cách kỳ lạ, bà tiếp tục công việc vớt xác như một cái nghiệp, dù bị bạn bè, người thân khuyên ngăn. Bộ phim khai thác sâu về nghề vớt xác và sự ranh giới giữa sự sống và cái chết, với những yếu tố ma quái từ truyền thuyết dân gian về ma da – linh hồn kéo người chết đuối dưới sông. Phim cũng làm nổi bật tình cảm mẹ con giữa bà Lệ và bé Nhung, với những tình tiết thể hiện sự gắn kết giữa hai người trong bối cảnh u ám và đầy nguy hiểm. Bé Nhung, trong một lần tình cờ, nhặt được một con búp bê bí ẩn – một chi tiết quen thuộc của thể loại kinh dị."
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/afacad"/>
+
+    <Button
+        android:id="@+id/button_book_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đặt vé"
+        android:fontFamily="@font/afacad"
+        android:background="@drawable/bg_button_red"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+</LinearLayout>
