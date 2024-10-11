@@ -28,7 +28,7 @@
             android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ĐỔI MẬT KHẨU"
+            android:text="XÁC THỰC TÀI KHOẢN"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -45,11 +45,10 @@
 
 
         <EditText
-            android:id="@+id/editText_OldPass"
+            android:id="@+id/editText_Pass"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:hint="Nhập mật khẩu cũ"
+            android:hint="Nhập mật khẩu"
             android:padding="12dp"
             android:background="@drawable/input_text"
             android:gravity="left"
@@ -59,42 +58,22 @@
             android:inputType="textPassword"
             android:drawableRight="@drawable/hide" />
 
-        <EditText
-            android:id="@+id/editText_NewPass"
-            android:layout_width="340dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Nhập mật khẩu mới"
-            android:padding="12dp"
-            android:background="@drawable/input_text"
-            android:gravity="left"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/afacad"
-            android:inputType="textPassword"
-            android:drawableRight="@drawable/hide" />
+            android:text="Vì lý do bảo mật, vui lòng nhập mật khẩu"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp">
 
-        <EditText
-            android:id="@+id/editText_VerifyPass"
-            android:layout_width="340dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Nhâp lại mật khẩu mới"
-            android:padding="12dp"
-            android:background="@drawable/input_text"
-            android:gravity="left"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/afacad"
-            android:inputType="textPassword"
-            android:drawableRight="@drawable/hide"/>
+        </TextView>
 
         <Button
-            android:id="@+id/button_CapNhatMK"
+            android:id="@+id/button_Verify"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Cập nhật"
+            android:layout_marginTop="28dp"
+            android:text="Xác nhận"
             android:padding="12dp"
             android:background="@drawable/btn_back_red"
             android:textSize="20sp"
