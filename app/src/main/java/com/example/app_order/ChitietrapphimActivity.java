@@ -17,7 +17,7 @@ public class ChitietrapphimActivity extends AppCompatActivity {
 
         // Thiết lập nút mặc định được chọn
         selectedButton = findViewById(R.id.btnMonday);
-        selectedButton.setBackgroundColor(Color.BLACK);
+        selectedButton.setBackgroundResource(R.drawable.rounded_btnday_selected);
         selectedButton.setTextColor(Color.WHITE);
 
         // Lắng nghe sự kiện click cho các nút
@@ -35,13 +35,14 @@ public class ChitietrapphimActivity extends AppCompatActivity {
         button.setOnClickListener(v -> {
             // Đặt lại màu cho nút đã chọn trước đó
             if (selectedButton != null) {
-                selectedButton.setBackgroundColor(Color.WHITE);
+                selectedButton.setBackgroundResource(R.drawable.rounded_btnday_default);
                 selectedButton.setTextColor(Color.BLACK);
             }
             // Cập nhật nút được chọn mới
             selectedButton = button;
-            selectedButton.setBackgroundColor(Color.BLACK);
+            selectedButton.setBackgroundResource(R.drawable.rounded_btnday_selected);
             selectedButton.setTextColor(Color.WHITE);
         });
     }
+
 }
