@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RapphimActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".KhuyenmaiActivity">
 
     <!-- Ô chứa tiêu đề và nút quay lại -->
     <LinearLayout
@@ -35,34 +35,24 @@
             android:layout_weight="1"
             android:fontFamily="@font/afacad_bold"
             android:gravity="center"
-            android:text="MUA VÉ"
+            android:text="KHUYẾN MÃI"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
+
     </LinearLayout>
 
-    <!-- ListView cho thành phố (vùng) và các rạp tương ứng -->
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_khuyenmai"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        app:tabTextAppearance="@style/Khuyenmai"
+        app:tabSelectedTextColor="#000000"
+        app:tabTextColor="#BEAEB0" />
 
-        <!-- ListView cho vùng -->
-        <ListView
-            android:id="@+id/lvVung"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:dividerHeight="1dp" />
-
-        <!-- ListView cho các rạp tương ứng -->
-        <ListView
-            android:id="@+id/lvRap"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:dividerHeight="1dp"
-            android:background="#FFF8E1" />
-    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/khuyenmai_viewpager"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tab_khuyenmai"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
