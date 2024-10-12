@@ -20,7 +20,7 @@ public class RapphimActivity extends AppCompatActivity {
     private String[] rapHaNoi = {"Hà Đông", "Kosmo", "Thăng Long", "West Lake"};
 
     // Khai báo adapter cho rạp
-    private CustomAdapter rapAdapter;
+    private RapphimAdapter rapAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class RapphimActivity extends AppCompatActivity {
         lvRap = findViewById(R.id.lvRap);
 
         // Sử dụng CustomAdapter cho ListView Vùng
-        CustomAdapter vungAdapter = new CustomAdapter(this, vungList, false);
+        RapphimAdapter vungAdapter = new RapphimAdapter(this, vungList, false);
         lvVung.setAdapter(vungAdapter);
 
         lvVung.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -47,10 +47,10 @@ public class RapphimActivity extends AppCompatActivity {
 
                 // Cập nhật danh sách rạp tương ứng
                 if (vungList[position].equals("Hà Nội (4)")) {
-                    CustomAdapter rapAdapter = new CustomAdapter(RapphimActivity.this, rapHaNoi, true);
+                    RapphimAdapter rapAdapter = new RapphimAdapter(RapphimActivity.this, rapHaNoi, true);
                     lvRap.setAdapter(rapAdapter);
                 } else if (vungList[position].equals("TPHCM (9)")) {
-                    CustomAdapter rapAdapter = new CustomAdapter(RapphimActivity.this, rapHCM, true);
+                    RapphimAdapter rapAdapter = new RapphimAdapter(RapphimActivity.this, rapHCM, true);
                     lvRap.setAdapter(rapAdapter);
                 }
             }
@@ -61,7 +61,7 @@ public class RapphimActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Lấy adapter hiện tại của ListView rạp
-                CustomAdapter rapAdapter = (CustomAdapter) lvRap.getAdapter();
+                RapphimAdapter rapAdapter = (RapphimAdapter) lvRap.getAdapter();
                 if (rapAdapter != null) {
                     rapAdapter.setSelectedPosition(position); // Đặt vị trí được chọn cho rạp
                 }

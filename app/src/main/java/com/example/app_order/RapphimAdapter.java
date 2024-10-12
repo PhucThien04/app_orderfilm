@@ -8,14 +8,14 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class CustomAdapter extends ArrayAdapter<String> {
+public class RapphimAdapter extends ArrayAdapter<String> {
     private final Context context;
     private final String[] values;
     private int selectedPosition = -1; // Vị trí item được chọn
     private boolean isRapList; // Để xác định đây là ListView rạp hay không
 
-    public CustomAdapter(Context context, String[] values, boolean isRapList) {
-        super(context, R.layout.activity_itemlv, values);
+    public RapphimAdapter(Context context, String[] values, boolean isRapList) {
+        super(context, R.layout.activity_itemrapphim, values);
         this.context = context;
         this.values = values;
         this.isRapList = isRapList;
@@ -29,7 +29,7 @@ public class CustomAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.activity_itemlv, parent, false);
+        View rowView = inflater.inflate(R.layout.activity_itemrapphim, parent, false);
         TextView textView = rowView.findViewById(R.id.tvItem);
         textView.setText(values[position]);
 
