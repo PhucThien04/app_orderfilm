@@ -104,29 +104,11 @@
             android:textColor="#FFFFFF"/>
     </LinearLayout>
 
-    <LinearLayout
+    <!-- RecyclerView để hiển thị danh sách phim -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/revPhim"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/tvMovieTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <GridLayout
-            android:id="@+id/gridLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:rowCount="1"
-            android:columnCount="3"
-            android:layout_marginTop="8dp">
-
-
-        </GridLayout>
-
-    </LinearLayout>
 </LinearLayout>
