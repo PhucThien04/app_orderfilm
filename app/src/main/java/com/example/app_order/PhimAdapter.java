@@ -1,5 +1,6 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +48,12 @@ public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.MovieViewHolde
             tvRoomName.setText(phongchieu.getName());
             tvStartTime.setText(phongchieu.getStartTime());
             tvAvailableSeats.setText("Ghế còn: " + phongchieu.getAvailableSeats());
+
+            //Chuyển trang
+            roomView.setOnClickListener(v -> {
+                Intent intent = new Intent(holder.itemView.getContext(), DatgheActivity.class);
+                holder.itemView.getContext().startActivity(intent);
+            });
 
             // Thêm roomView vào GridLayout
             holder.gridLayoutRooms.addView(roomView);

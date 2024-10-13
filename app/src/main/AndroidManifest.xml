@@ -13,9 +13,11 @@
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
         <activity
+            android:name=".DatgheActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChitietrapphimActivity"
-            android:exported="false" >
-
+            android:exported="false">
         </activity>
         <activity
             android:name=".ChitietkmActivity"
@@ -34,7 +36,8 @@
         </activity>
         <activity
             android:name=".KhuyenmaiActivity"
-            android:exported="false" />
+            android:exported="false" >
+        </activity>
         <activity
             android:name=".Cinema_Lineup"
             android:exported="false" />

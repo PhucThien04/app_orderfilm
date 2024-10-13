@@ -17,6 +17,7 @@ public class RapphimActivity extends AppCompatActivity {
 
     // Nút sang trang mới
     private Button btnNext;
+
     // Khai báo các ListView và dữ liệu
     private ListView lvVung, lvRap;
     private String[] vungList = {"TPHCM (9)", "Hà Nội (4)"};

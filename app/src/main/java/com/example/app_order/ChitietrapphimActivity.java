@@ -1,8 +1,12 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,6 +17,10 @@ import java.util.List;
 
 public class ChitietrapphimActivity extends AppCompatActivity {
 
+    // Nút
+    private ImageView btnBack;
+    private TextView btnDiachi;
+
     private Button selectedButton;
 
     private RecyclerView recyclerViewMovies;
@@ -22,6 +30,24 @@ public class ChitietrapphimActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chitietrapphim);
+
+        //Nút
+        btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Back = new Intent(ChitietrapphimActivity.this, RapphimActivity.class);
+                startActivity(Back);
+            }
+        });
+        btnDiachi = findViewById(R.id.btnDchi);
+        btnDiachi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Dchi = new Intent(ChitietrapphimActivity.this, DiachiActivity.class);
+                startActivity(Dchi);
+            }
+        });
 
         // Thiết lập nút mặc định được chọn
         selectedButton = findViewById(R.id.btnMonday);
