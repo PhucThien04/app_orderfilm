@@ -60,7 +60,6 @@ Với mong muốn mang lại những trải nghiệm điện ảnh sống độn
         android:layout_gravity="center"
         android:layout_marginTop="20dp">
 
-
     </com.codesgood.views.JustifiedTextView>
 
 </LinearLayout>

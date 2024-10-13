@@ -1,10 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrangChu">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#1E1E2A">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/circle_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal">
+
+        </me.relex.circleindicator.CircleIndicator>
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_nav" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager_film"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#1E1E2A"
+        app:cardCornerRadius="20dp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:background="@drawable/color_bottom_nav"
+           android:gravity="center">
+
+           <LinearLayout
+               android:id="@+id/btnFilms"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center">
+
+               <ImageView
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/filmroll">
+
+               </ImageView>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Phim"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   />
+
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/btnPromotion"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:paddingLeft="10dp">
+
+               <ImageView
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/promotions">
+
+               </ImageView>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Khuyến mãi"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   />
+
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/btnLogo"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp">
+
+               <ImageView
+                   android:id="@+id/img_logo"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:src="@drawable/logo">
+
+               </ImageView>
+
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/btnCinema"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:paddingRight="10dp">
+
+               <ImageView
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/cinemascreen">
+
+               </ImageView>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Rạp"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   />
+
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/btnAccount"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center">
+
+               <ImageView
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/account">
+
+               </ImageView>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Tài khoản"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   />
+
+           </LinearLayout>
+       </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>
