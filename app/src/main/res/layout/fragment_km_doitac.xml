@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KmDoitacFragment">
+
+    <LinearLayout
+        android:id="@+id/btnKMdoitac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="#FFFCF0"
+        android:orientation="vertical">
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="160dp"-->
+        <!--            android:src=""/>-->
+        <TextView
+            android:id="@+id/tvKMdoitac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/afacad_bold"
+            android:textSize="25sp"
+            android:layout_margin="5dp"
+            android:text="ZALOPAY: ĐẶT VÉ XEM PHIM CHỈ 55.000Đ TẠI LOTTE CINEMA WEST..." />
+
+        <TextView
+            android:id="@+id/tvKMdoitactg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="19/09/2024 - 26/18/2024" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatgheActivity"
+    android:background="#1E1E2A"
+    android:orientation="vertical">
+
+    <!-- Ô chứa tiêu đề và nút quay lại -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_header"
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
+
+        <!-- Nút quay lại  -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="#FFFFFF"
+            android:layout_marginLeft="13dp"
+            android:layout_centerVertical="true" />
+
+        <!-- TextView tiêu đề -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/tvTieude1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/afacad_bold"
+                android:text="CÁM"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tvTieude2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/afacad_bold"
+                android:text="2D Lồng tiếng | 18:00"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MÀN HÌNH"
+            android:fontFamily="@font/afacad_bold"
+            android:background="#FFF8E1"
+            android:textColor="#685D30"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"/>
+
+        <!-- GridLayout chứa các ghế -->
+        <GridLayout
+            android:id="@+id/gridGhe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="9"
+            android:rowCount="7"
+            android:padding="5dp"
+            android:alignmentMode="alignBounds"
+            android:useDefaultMargins="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_footer">
+
+        <!-- TextView hiển thị tổng tiền -->
+        <TextView
+            android:id="@+id/tvTien"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Tổng: 0 VND"
+            android:textSize="20sp"
+            android:fontFamily="@font/afacad_bold"
+            android:textColor="#B22A38"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btnTieptuc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:text="Thanh toán"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/afacad_bold"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -13,55 +13,50 @@
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
         <activity
-            android:name=".Information_Account"
-            android:exported="true" >
+            android:name=".ThanhcongActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThanhtoanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DatgheActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChitietrapphimActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".ChitietkmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DiachiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RapphimActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".KhuyenmaiActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".Cinema_Lineup"
+            android:exported="false" />
         <activity
             android:name=".DangKy"
-            android:exported="true">
-        </activity>
-
+            android:exported="false" />
         <activity
             android:name=".QuenMatKhau"
             android:exported="false" />
-
         <activity
             android:name=".DangNhap"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
-        <activity android:name=".CompanyInfoActivity"
-            android:exported="true" />
-
-        <activity android:name=".PaymentPolicyActivity"
-            android:exported="true" />
-
-        <activity android:name=".ChangePasswordActivity"
-            android:exported="true" />
-
-        <activity android:name=".InformationActivity"
-            android:exported="true" />
-
-        <activity android:name=".TransactionsActivity"
-            android:exported="true" />
-
-        <activity android:name=".NotificationsActivity"
-            android:exported="true" />
-
-        <activity android:name=".BookingHistoryActivity"
-            android:exported="true" />
-
-        <activity android:name=".RefundHistory"
-            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
