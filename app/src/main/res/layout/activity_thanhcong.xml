@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThanhtoanActivity"
+    tools:context=".ThanhcongActivity"
     android:orientation="vertical">
 
     <!-- Ô chứa tiêu đề và nút quay lại -->
@@ -97,75 +97,57 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/anhmaquet"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/afacad_medium_italic"
+        android:text="Vui lòng đưa mã số này đến quầy vé để nhận vé của bạn"
+        android:textSize="15sp"
+        android:gravity="center"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chọn phương thức thanh toán:"
-        android:textSize="23sp"
+        android:text="Thông tin vé:"
         android:fontFamily="@font/afacad_bold"
+        android:textSize="25sp"
         android:textColor="#000000"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"/>
-
-    <RadioGroup
-        android:id="@+id/radioGroupPayment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="16dp">
-
-        <RadioButton
-            android:id="@+id/radioZalo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Zalo"
-            android:fontFamily="@font/afacad"
-            android:textSize="17sp"/>
-
-        <RadioButton
-            android:id="@+id/radioMomo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Momo"
-            android:fontFamily="@font/afacad"
-            android:textSize="17sp"/>
-
-        <RadioButton
-            android:id="@+id/radioATM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ATM"
-            android:fontFamily="@font/afacad"
-            android:textSize="17sp"/>
-    </RadioGroup>
-
+        android:layout_margin="16dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp">
+        android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/checkBoxTerms"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:text="Tôi đã đọc và đồng ý với Điều kiện và Điều khoản, cam kết mua vé xem phim cho người đúng độ tuổi quy định" />
-
-        <Button
-            android:id="@+id/buttonPay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Thanh toán"
+            android:textColor="#000000"
+            android:fontFamily="@font/afacad_bold"
             android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:background="@drawable/rounded_button"
-            android:enabled="false"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"/>
+            android:text="Mã vé:\nTên phim:\nRạp:\nPhòng chiếu:\nSuất chiếu:\nTỒNG TIỀN:"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"/>
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/afacad"
+            android:textSize="20sp"
+            android:text="2448635333465378\nCÁM\nCantavil (TPHCM)\nScreen 06\n30/09/2024 18:00\nXXX000 VNĐ"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="end" />
     </LinearLayout>
 
 
