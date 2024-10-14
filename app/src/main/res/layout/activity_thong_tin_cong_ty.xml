@@ -14,16 +14,16 @@
         android:padding="10dp"
         android:layout_marginTop="5dp">
 
-        <!-- ImageView nằm bên trái -->
+
         <ImageView
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_back_arrow"
             android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_back_arrow"
             app:tint="#FFFFFF" />
 
-        <!-- TextView nằm chính giữa -->
         <TextView
             android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
@@ -35,5 +35,32 @@
             android:layout_centerInParent="true" />
 
     </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/imgCinema"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/lotte_cinema_pico"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/img_border">
+    </ImageView>
+
+    <com.codesgood.views.JustifiedTextView
+        android:id="@+id/txtContent"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:text="LOTTE Cinema Việt Nam được thành lập từ năm 2008, đến nay, Lotte Cinema Việt Nam đã mở rộng quy mô hơn 40 cụm rạp chiếu phim tại các khu vực: Hà Nội, Thành phố Hồ Chí Minh, các tỉnh thành miền Bắc, Trung, Nam. Tất cả phòng chiếu phim LOTTE Cinema được đầu tư công nghệ tiên tiến và hiện đại bậc nhất cùng thiết kế sang trọng và tinh tế.
+Với mong muốn mang lại những trải nghiệm điện ảnh sống động, chân thật cùng những giây phút thư giãn bên gia đình, bạn bè và người thân cho quý khách hàng, hệ thống rạp chiếu phim LOTTE Cinema Việt Nam luôn nỗ lực nhằm phát triển chất lượng dịch vụ mang đẳng cấp quốc tế với mức giá ưu đãi. LOTTE Cinema cam kết không ngừng cải tiến và nâng cấp hệ thống để có thể đem lại sự hài lòng tuyệt đối cho khách hàng."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:letterSpacing="0.1"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+
+    </com.codesgood.views.JustifiedTextView>
 
 </LinearLayout>
