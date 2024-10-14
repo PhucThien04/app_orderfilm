@@ -145,7 +145,7 @@
         android:layout_marginTop="16dp" />
 
     <Button
-        android:id="@+id/button_book_ticket"
+        android:id="@+id/btnBookTicket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đặt vé"

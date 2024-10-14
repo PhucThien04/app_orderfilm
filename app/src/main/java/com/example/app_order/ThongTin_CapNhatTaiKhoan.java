@@ -1,5 +1,6 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -15,10 +16,10 @@ public class ThongTin_CapNhatTaiKhoan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_thong_tin_cap_nhat_tai_khoan);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        findViewById(R.id.btnBack).setOnClickListener(v -> {
+            Intent intent = new Intent(ThongTin_CapNhatTaiKhoan.this, Information_Account.class);
+            startActivity(intent);
         });
     }
 }

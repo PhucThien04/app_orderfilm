@@ -13,7 +13,7 @@ public class Information_Account  extends AppCompatActivity {
 
         // Sự kiện cho các nút chuyển đổi giữa các layout
         findViewById(R.id.btnInformation).setOnClickListener(v -> {
-            Intent intent = new Intent(Information_Account.this, InformationActivity.class);
+            Intent intent = new Intent(Information_Account.this, BaoMatTaiKhoan.class);
             startActivity(intent);
         });
 
@@ -23,13 +23,13 @@ public class Information_Account  extends AppCompatActivity {
         });
 
         findViewById(R.id.btnNotifications).setOnClickListener(v -> {
-            Intent intent = new Intent(Information_Account.this, NotificationsActivity.class);
+            Intent intent = new Intent(Information_Account.this, ThongBao.class);
             startActivity(intent);
         });
 
         // Thiết lập sự kiện click cho các nút
         findViewById(R.id.btnCompanyInfo).setOnClickListener(v -> {
-            startActivity(new Intent(Information_Account.this, CompanyInfoActivity.class));
+            startActivity(new Intent(Information_Account.this, ThongTinCongTy.class));
         });
 
         findViewById(R.id.btnPaymentPolicy).setOnClickListener(v -> {
@@ -37,7 +37,7 @@ public class Information_Account  extends AppCompatActivity {
         });
 
         findViewById(R.id.btnChangePassword).setOnClickListener(v -> {
-            startActivity(new Intent(Information_Account.this, ChangePasswordActivity.class));
+            startActivity(new Intent(Information_Account.this, DoiMatKhau.class));
         });
 
         findViewById(R.id.btnDeleteAccount).setOnClickListener(v -> {

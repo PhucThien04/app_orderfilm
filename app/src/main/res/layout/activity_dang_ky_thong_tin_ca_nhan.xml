@@ -129,6 +129,15 @@
             android:textColor="@color/black"
             android:fontFamily="@font/afacad"
             android:inputType="text"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:buttonTint="#B22A38"
+            android:checked="false"
+            android:text="Bằng việc đăng ký, bạn đã đồng ý với Điều khoản sử dụng Chính sách bảo mật của Lotte Cinema."
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"/>
+
 
         <Button
             android:id="@+id/button_signUp"

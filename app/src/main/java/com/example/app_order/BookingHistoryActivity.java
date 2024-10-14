@@ -15,5 +15,10 @@ public class BookingHistoryActivity extends AppCompatActivity {
             Intent intent = new Intent(BookingHistoryActivity.this, TransactionsActivity.class);
             startActivity(intent);
         });
+
+        findViewById(R.id.btnBookNow).setOnClickListener(v -> {
+            Intent intent = new Intent(BookingHistoryActivity.this, Cinema_Lineup.class);
+            startActivity(intent);
+        });
     }
 }

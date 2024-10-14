@@ -154,6 +154,7 @@
             android:layout_marginRight="20dp"
             android:layout_gravity="end"/>
         <Button
+            android:id="@+id/btnXacNhan"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Xác nhận"

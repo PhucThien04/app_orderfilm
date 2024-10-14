@@ -47,7 +47,7 @@
         android:background="@drawable/img_border">
     </ImageView>
 
-    <com.codesgood.views.JustifiedTextView
+    <TextView
         android:id="@+id/txtContent"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
@@ -59,8 +59,6 @@ Với mong muốn mang lại những trải nghiệm điện ảnh sống độn
         android:textSize="16dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp">
-
-
-    </com.codesgood.views.JustifiedTextView>
+    </TextView>
 
 </LinearLayout>

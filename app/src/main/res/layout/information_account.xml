@@ -140,12 +140,16 @@
         android:text="XÓA TÀI KHOẢN"
         android:textColor="#FFFFFF"
         android:background="@drawable/bg_button_red"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:layout_gravity="center"
         android:text="Đăng xuất"
         android:drawableStart="@drawable/baseline_logout_24" />

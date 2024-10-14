@@ -17,7 +17,7 @@ public class TransactionsActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.btnRefundHistory).setOnClickListener(v -> {
-            Intent intent = new Intent(TransactionsActivity.this, RefundHistory.class);
+            Intent intent = new Intent(TransactionsActivity.this, RefundHistoryActivity.class);
             startActivity(intent);
         });
 
