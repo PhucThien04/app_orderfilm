@@ -31,19 +31,15 @@
         <activity android:name=".BaoMatTaiKhoan"/>
         <activity android:name=".PaymentPolicyActivity"/>
         <activity android:name=".RefundHistoryActivity"/>
-        <activity android:name=".ChangePasswordActivity"/>
         <activity android:name=".TransactionsActivity"/>
         <activity android:name=".ChitietkmActivity"/>
         <activity android:name=".ChitietrapphimActivity"/>
         <activity android:name=".Cinema_Lineup"/>
-        <activity android:name=".CompanyInfoActivity"/>
         <activity android:name=".DangKyThongTinCaNhan"/>
         <activity android:name=".DatgheActivity"/>
         <activity android:name=".DiachiActivity"/>
         <activity android:name=".DoiMatKhau"/>
-        <activity android:name=".InformationActivity"/>
         <activity android:name=".KhuyenmaiActivity"/>
-        <activity android:name=".NotificationsActivity"/>
         <activity android:name=".RapphimActivity"/>
         <activity android:name=".ThanhcongActivity"/>
         <activity android:name=".ThanhtoanActivity"/>
@@ -55,7 +51,6 @@
         <activity android:name=".DangNhap"/>
         <activity android:name=".DangKy"/>
         <activity android:name=".QuenMatKhau"/>
-        <activity android:name=".MainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"
