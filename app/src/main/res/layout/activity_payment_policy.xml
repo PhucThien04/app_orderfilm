@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1a1a2e">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_back_arrow"
+            android:drawableTint="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHÍNH SÁCH THANH TOÁN"
+            android:fontFamily="@font/afacad"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. QUY ĐỊNH VỀ THANH TOÁN"
+                android:fontFamily="@font/afacad"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quý Khách hàng có thể lựa chọn các hình thức thanh toán sau để thanh toán cho giao dịch đặt vé trên Ứng Dụng của RIO Cinemas:"
+                android:textSize="16sp"
+                android:fontFamily="@font/afacad"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.1  Các cổng thanh toán OnePay, VNPAY và ứng dụng QR code."
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/afacad"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.2  Thẻ quà Tặng RIO Cinemas, Phiếu tặng vé Xem phim RIO."
+                android:fontFamily="@font/afacad"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.3  Điểm thưởng tích lũy của Thành viên RIO Cinemas theo chương trình tích lũy điểm thưởng tại từng thời điểm."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. CHI TIẾT CÁC HÌNH THỨC THANH TOÁN"
+                android:fontFamily="@font/afacad"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-  Điểm thưởng tích lũy của Thành viên RIO Cinemas (Membership Coin): Mỗi 01 điểm thưởng tương đương với 1.000 VND. Điểm thưởng này, bạn có thể sử dụng để Thanh toán vé xem phim. Khi sử dụng điểm thưởng, bạn vui lòng xuất trình thẻ thành viên để được nhân viên hỗ trợ thanh toán. Điểm thưởng được sử dụng phải từ 20 điểm trở lên."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="24dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Để kiểm tra điểm thưởng, bạn vui lòng truy cập vào mục Tài Khoản trên Ứng Dụng RIO Cinemas."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Thẻ quà Tặng RIO Cinemas, Phiếu tặng vé Xem phim RIO Cinemas: Với Thẻ Quà Tặng RIO Cinemas hoặc Phiếu tặng vé Xem phim RIO Cinemas, bạn có thể nhận được khi Tham gia các ưu đãi Thành viên của RIO hoặc chơi các mini game trên Fanpage."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="24dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mỗi loại Phiếu tặng vé Xem phim RIO Cinemas sẽ có giá trị quy đổi và thời hạn sử dụng khác nhau. Bạn vui lòng đọc kỹ các điều khoản sử dụng ở mặt sau Phiếu tặng vé Xem phim RIO Cinemas để biết thêm chi tiết. "
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. TRƯỜNG HỢP GIAO DỊCH THANH TOÁN KHÔNG THÀNH CÔNG"
+                android:fontFamily="@font/afacad"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giao dịch thanh toán không thành công có thể do nhiều nguyên nhân. Bạn tham khảo các nguyên nhân sau:"
+                android:fontFamily="@font/afacad"
+                android:textSize="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Chưa đăng ký chức năng thanh toán trên Internet với Ngân hàng."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Đối với thẻ Visa, MasterCard: Trong quá trình thanh toán, có thể bạn được yêu cầu nhập Mật khẩu của chương trình Verified by Visa hoặc MasterCard SecureCode... nhưng bạn đã không hoàn thành bước xác thực này."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Thẻ không đủ hạn mức/ số dư để thanh toán. Một số Ngân hàng có quy định cả hạn mức chi tiêu theo ngày cho thẻ."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Nhập sai thông tin thẻ."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vui lòng liên hệ hotline 0846 27 22 88 hoặc Ngân hàng phát hành thẻ để tìm hiểu nguyên nhân chính xác."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. TRƯỜNG HỢP THANH TOÁN THÀNH CÔNG NHƯNG KHÔNG NHẬN ĐƯỢC VÉ"
+                android:fontFamily="@font/afacad"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Gửi thông tin về mail: cskh@riocenter.vn"
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Điền đầy đủ thông tin bên dưới:"
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.1 Họ tên người đặt vé."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.2 Số điện thoại."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.3 Email dùng để đặt vé."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.4 Tên phim, giờ chiếu, số ghế, rạp đặt vé."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5 Loại Thẻ thanh toán (ATM của NH nào, Visa, Master, UnionPay)."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.6 Kênh mua vé: App hay Web hay Moveek."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.7 Giá trị thanh toán."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.8 Hình ảnh giao dịch đã bị trừ tiền."
+                android:fontFamily="@font/afacad"
+                android:textSize="16sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

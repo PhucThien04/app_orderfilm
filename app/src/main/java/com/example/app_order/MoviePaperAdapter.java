@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-public class ViewPaperAdapter extends FragmentStateAdapter {
-    public ViewPaperAdapter(@NonNull FragmentActivity fragmentActivity) {
+public class MoviePaperAdapter extends FragmentStateAdapter {
+    public MoviePaperAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
 

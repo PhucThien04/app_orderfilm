@@ -13,7 +13,7 @@
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
         <activity
-            android:name=".Cinema_Lineup"
+            android:name=".Information_Account"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,20 +21,47 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".DangKy"
             android:exported="true">
-
         </activity>
+
         <activity
             android:name=".QuenMatKhau"
             android:exported="false" />
+
         <activity
             android:name=".DangNhap"
-            android:exported="false"></activity>
+            android:exported="false"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
+        <activity android:name=".CompanyInfoActivity"
+            android:exported="true" />
+
+        <activity android:name=".PaymentPolicyActivity"
+            android:exported="true" />
+
+        <activity android:name=".ChangePasswordActivity"
+            android:exported="true" />
+
+        <activity android:name=".InformationActivity"
+            android:exported="true" />
+
+        <activity android:name=".TransactionsActivity"
+            android:exported="true" />
+
+        <activity android:name=".NotificationsActivity"
+            android:exported="true" />
+
+        <activity android:name=".BookingHistoryActivity"
+            android:exported="true" />
+
+        <activity android:name=".RefundHistory"
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

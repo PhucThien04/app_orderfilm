@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:id="@+id/films_showing"
-    android:background="#1a1a2e"
+    android:background="#1A1A2E"
     android:padding="16dp">
 
     <!-- Toolbar -->
@@ -24,49 +23,37 @@
             android:drawableStart="@drawable/ic_back_arrow"
             android:drawableTint="@color/white"/>
 
-        <!-- Title -->
         <TextView
-            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:text="PHIM"
+            android:text="GIAO DỊCH"
             android:textSize="24sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:fontFamily="@font/afacad"/>
+            android:layout_marginStart="20dp" />
     </LinearLayout>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+    <!-- Account Options -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#1a1a2e"
-        app:tabTextColor="@color/white">
+        android:orientation="vertical"
+        android:layout_marginTop="24dp">
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnBookingHistory"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phim đang chiếu"/>
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:text="Lịch sử đặt vé" />
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnRefundHistory"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phim sắp chiếu" />
+            android:text="Lịch sử hoàn vé"
+            android:drawableEnd="@drawable/ic_arrow_right" />
 
-    </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPaper"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-
+    </LinearLayout>
 </LinearLayout>
