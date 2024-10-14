@@ -24,7 +24,7 @@
             android:name=".DiachiActivity"
             android:exported="false" />
         <activity
-            android:name=".ThongTin_CapNhatTaiKhoan"
+            android:name=".TrangChu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
