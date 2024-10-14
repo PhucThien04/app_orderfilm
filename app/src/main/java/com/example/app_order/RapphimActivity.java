@@ -38,6 +38,11 @@ public class RapphimActivity extends AppCompatActivity {
             return insets;
         });
 
+        findViewById(R.id.btnBack).setOnClickListener(v -> {
+            Intent intent = new Intent(RapphimActivity.this, TrangChu.class);
+            startActivity(intent);
+        });
+
         //Nút sang trang tiếp
         btnNext = findViewById(R.id.btnTieptuc);
         btnNext.setOnClickListener(new View.OnClickListener() {
