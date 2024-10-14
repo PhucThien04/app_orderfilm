@@ -58,6 +58,7 @@
 
 
         <Button
+            android:id="@+id/btnLayLaiMatKhau"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -75,16 +76,22 @@
             android:layout_marginTop="8dp"
             android:layout_gravity="center">
 
-            <TextView
+            <Button
+                android:id="@+id/btnDangNhap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Quên mật khẩu? / "
+                android:text="Đăng nhập / "
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/afacad"
                 android:letterSpacing="0.1"/>
-            <TextView
+            <Button
+                android:id="@+id/btnDangKy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
                 android:text="Đăng ký"
                 android:textColor="@color/white"
                 android:fontFamily="@font/afacad"

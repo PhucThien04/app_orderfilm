@@ -1,6 +1,7 @@
 package com.example.app_order;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -25,10 +26,10 @@ public class DangKyThongTinCaNhan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_dang_ky_thong_tin_ca_nhan);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        findViewById(R.id.button_signUp).setOnClickListener(v -> {
+            Intent intent = new Intent(DangKyThongTinCaNhan.this, XacThucTaiKhoan.class);
+            startActivity(intent);
         });
         AnhXa();
         edTxt_Date.setOnClickListener(new View.OnClickListener() {

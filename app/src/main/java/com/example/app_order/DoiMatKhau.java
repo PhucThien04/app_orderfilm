@@ -1,5 +1,6 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -22,10 +23,10 @@ public class DoiMatKhau extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_doi_mat_khau);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        findViewById(R.id.btnBack).setOnClickListener(v -> {
+            Intent intent = new Intent(DoiMatKhau.this, Information_Account.class);
+            startActivity(intent);
         });
 
         AnhXa();

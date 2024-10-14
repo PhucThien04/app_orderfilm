@@ -1,5 +1,6 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -25,6 +26,16 @@ public class Now_Showing extends Fragment {
 
         // Tự động chuyển ảnh nếu cần (không bắt buộc)
         autoSlideImages();
+
+        view.findViewById(R.id.btnBuyTicket_1).setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), DetailMovie_Cam.class);
+            startActivity(intent);
+        });
+
+        view.findViewById(R.id.btnBuyTicket_2).setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), DetailMovie_DoAnhCongDuocToi.class);
+            startActivity(intent);
+        });
         return view;
     }
 

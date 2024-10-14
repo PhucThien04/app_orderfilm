@@ -138,19 +138,23 @@
             android:layout_marginTop="8dp"
             android:layout_gravity="center">
 
-            <TextView
-                android:id="@+id/textView_forgotPass"
+            <Button
+                android:id="@+id/btnQuenMatKhau"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Quên mật khẩu? / "
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/afacad"
                 android:letterSpacing="0.1"/>
-            <TextView
-                android:id="@+id/textView_signUp"
+            <Button
+                android:id="@+id/btnDangNhap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Đăng ký"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:text="Đăng Nhập"
                 android:textColor="@color/white"
                 android:fontFamily="@font/afacad"
                 android:letterSpacing="0.1"/>
