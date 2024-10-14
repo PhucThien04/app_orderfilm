@@ -33,19 +33,23 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/bottom_nav" />
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_above="@id/bottom_nav"
+        android:layout_alignParentTop="true">
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager_film"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
         </androidx.viewpager.widget.ViewPager>
+    </androidx.viewpager.widget.ViewPager>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
@@ -71,8 +75,8 @@
                android:gravity="center">
 
                <ImageView
-                   android:layout_width="40dp"
-                   android:layout_height="40dp"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
                    android:src="@drawable/filmroll">
 
                </ImageView>
@@ -95,8 +99,8 @@
                android:paddingLeft="10dp">
 
                <ImageView
-                   android:layout_width="40dp"
-                   android:layout_height="40dp"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
                    android:src="@drawable/promotions">
 
                </ImageView>
@@ -139,8 +143,8 @@
                android:paddingRight="10dp">
 
                <ImageView
-                   android:layout_width="40dp"
-                   android:layout_height="40dp"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
                    android:src="@drawable/cinemascreen">
 
                </ImageView>
@@ -162,8 +166,8 @@
                android:gravity="center">
 
                <ImageView
-                   android:layout_width="40dp"
-                   android:layout_height="40dp"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
                    android:src="@drawable/account">
 
                </ImageView>
