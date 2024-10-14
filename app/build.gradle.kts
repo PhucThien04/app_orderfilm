@@ -44,4 +44,5 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation ("com.codesgood:justifiedtextview:1.1.0")
     implementation ("me.relex:circleindicator:2.1.6")
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
 }

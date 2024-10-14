@@ -1,5 +1,6 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -27,5 +28,10 @@ public class KhuyenmaiActivity extends AppCompatActivity {
         viewPager.setAdapter(viewPagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
+
+        findViewById(R.id.btnBack).setOnClickListener(v -> {
+            Intent intent = new Intent(KhuyenmaiActivity.this, TrangChu.class);
+            startActivity(intent);
+        });
     }
 }

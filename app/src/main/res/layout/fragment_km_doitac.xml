@@ -6,6 +6,7 @@
     tools:context=".KmDoitacFragment">
 
     <LinearLayout
+        android:id="@+id/btnKMdoitac"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -17,7 +18,7 @@
         <!--            android:layout_height="160dp"-->
         <!--            android:src=""/>-->
         <TextView
-            android:id="@+id/tvKMphim2"
+            android:id="@+id/tvKMdoitac"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/afacad_bold"
@@ -26,7 +27,7 @@
             android:text="ZALOPAY: ĐẶT VÉ XEM PHIM CHỈ 55.000Đ TẠI LOTTE CINEMA WEST..." />
 
         <TextView
-            android:id="@+id/tvKMphimtg2"
+            android:id="@+id/tvKMdoitactg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"

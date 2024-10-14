@@ -5,11 +5,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
@@ -17,7 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 public class Cinema_Lineup extends AppCompatActivity{
     TabLayout tabLayout;
     ViewPager2 viewPager2;
-    ViewPaperAdapter viewPaperAdapter;
+    MoviePaperAdapter viewPaperAdapter;
     FrameLayout frameLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +23,7 @@ public class Cinema_Lineup extends AppCompatActivity{
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewPaper);
         frameLayout = findViewById(R.id.frameLayout);
-        viewPaperAdapter = new ViewPaperAdapter(this);
+        viewPaperAdapter = new MoviePaperAdapter(this);
         viewPager2.setAdapter(viewPaperAdapter);
         frameLayout = findViewById(R.id.frameLayout);
 

@@ -17,6 +17,7 @@ public class RapphimActivity extends AppCompatActivity {
 
     // Nút sang trang mới
     private Button btnNext;
+
     // Khai báo các ListView và dữ liệu
     private ListView lvVung, lvRap;
     private String[] vungList = {"TPHCM (9)", "Hà Nội (4)"};
@@ -35,6 +36,11 @@ public class RapphimActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        findViewById(R.id.btnBack).setOnClickListener(v -> {
+            Intent intent = new Intent(RapphimActivity.this, TrangChu.class);
+            startActivity(intent);
         });
 
         //Nút sang trang tiếp

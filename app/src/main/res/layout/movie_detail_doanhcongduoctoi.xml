@@ -7,34 +7,37 @@
     android:background="#1a1a2e"
     android:id="@+id/movie_detail_cam">
 
-    <!-- Toolbar -->
-    <LinearLayout
+    <!-- Ô chứa tiêu đề và nút quay lại -->
+    <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:gravity="center_vertical">
+        android:background="@drawable/rounded_header"
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
 
-        <!-- Back Button -->
+        <!-- Nút quay lại  -->
         <ImageView
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back_arrow"
-            app:tint="#FFFFFF" />
+            android:layout_marginTop="6dp"
+            app:tint="#FFFFFF"
+            android:layout_alignParentStart="true" />
 
-        <!-- Title -->
+        <!-- TextView tiêu đề -->
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/tvTieude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:fontFamily="@font/afacad_bold"
+            android:gravity="center"
             android:text="ĐỐ ANH CÒNG ĐƯỢC TÔI"
-            android:textSize="24sp"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:fontFamily="@font/afacad"/>
-    </LinearLayout>
+            android:textSize="30sp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -145,7 +148,7 @@
         android:fontFamily="@font/afacad"/>
 
     <Button
-        android:id="@+id/button_book_ticket"
+        android:id="@+id/btnBookTicket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đặt vé"

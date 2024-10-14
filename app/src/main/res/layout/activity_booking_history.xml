@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A1A2E"
+    android:padding="16dp">
+
+    <!-- Ô chứa tiêu đề và nút quay lại -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_header"
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
+
+        <!-- Nút quay lại  -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_marginTop="6dp"
+            app:tint="#FFFFFF"
+            android:layout_alignParentStart="true" />
+
+        <!-- TextView tiêu đề -->
+        <TextView
+            android:id="@+id/tvTieude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/afacad_bold"
+            android:gravity="center"
+            android:text="VÉ ĐÃ MUA"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bạn chưa có giao dịch nào trên Lotte Cinema"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="32dp" />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/baseline_airplane_ticket_24"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnBookNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đặt vé ngay bạn nhé!"
+        android:background="@drawable/btn_back_red"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

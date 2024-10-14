@@ -1,9 +1,11 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.fragment.app.Fragment;
 
@@ -13,6 +15,8 @@ import androidx.fragment.app.Fragment;
  * create an instance of this fragment.
  */
 public class KmPhimFragment extends Fragment {
+
+    private LinearLayout btnKM;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,6 +62,20 @@ public class KmPhimFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_km_phim, container, false);
+        View view = inflater.inflate(R.layout.fragment_km_phim, container, false);
+
+        // Khởi tạo view btnKM sau khi giao diện được inflate
+        btnKM = view.findViewById(R.id.btnKMphim1);
+        btnKM.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Chuyển sang ChitietkmActivity khi bấm nút
+                Intent intent = new Intent(getActivity(), ChitietkmActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
+
 }

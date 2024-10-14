@@ -1,5 +1,6 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -21,10 +22,20 @@ public class DangKy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_dang_ky);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        findViewById(R.id.btnQuenMatKhau).setOnClickListener(v -> {
+            Intent intent = new Intent(DangKy.this, QuenMatKhau.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btnDangNhap).setOnClickListener(v -> {
+            Intent intent = new Intent(DangKy.this, DangNhap.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.button_signUp).setOnClickListener(v -> {
+            Intent intent = new Intent(DangKy.this, DangKyThongTinCaNhan.class);
+            startActivity(intent);
         });
 
     AnhXa();

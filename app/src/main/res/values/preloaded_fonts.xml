@@ -3,6 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/afacad</item>
         <item>@font/afacad_bold</item>
+        <item>@font/afacad_medium_italic</item>
         <item>@font/krona_one</item>
     </array>
 </resources>

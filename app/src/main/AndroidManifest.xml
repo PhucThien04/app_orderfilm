@@ -12,17 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
-        <activity
-            android:name=".ChitietrapphimActivity"
-            android:exported="false" >
 
-        </activity>
-        <activity
-            android:name=".ChitietkmActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DiachiActivity"
-            android:exported="false" />
         <activity
             android:name=".TrangChu"
             android:exported="true">
@@ -32,24 +22,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".KhuyenmaiActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Cinema_Lineup"
-            android:exported="false" />
-        <activity
-            android:name=".DangKy"
-            android:exported="false" />
-        <activity
-            android:name=".QuenMatKhau"
-            android:exported="false" />
-        <activity
-            android:name=".DangNhap"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
+        <activity android:name=".BookingHistoryActivity"/>
+        <activity android:name=".DetailMovie_Modomdom"/>
+        <activity android:name=".DetailMovie_Cam"/>
+        <activity android:name=".DetailMovie_DoAnhCongDuocToi"/>
+        <activity android:name=".DetailMovie_MaDa"/>
+        <activity android:name=".BaoMatTaiKhoan"/>
+        <activity android:name=".PaymentPolicyActivity"/>
+        <activity android:name=".RefundHistoryActivity"/>
+        <activity android:name=".TransactionsActivity"/>
+        <activity android:name=".ChitietkmActivity"/>
+        <activity android:name=".ChitietrapphimActivity"/>
+        <activity android:name=".Cinema_Lineup"/>
+        <activity android:name=".DangKyThongTinCaNhan"/>
+        <activity android:name=".DatgheActivity"/>
+        <activity android:name=".DiachiActivity"/>
+        <activity android:name=".DoiMatKhau"/>
+        <activity android:name=".KhuyenmaiActivity"/>
+        <activity android:name=".RapphimActivity"/>
+        <activity android:name=".ThanhcongActivity"/>
+        <activity android:name=".ThanhtoanActivity"/>
+        <activity android:name=".ThongBao"/>
+        <activity android:name=".ThongTin_CapNhatTaiKhoan"/>
+        <activity android:name=".ThongTinCongTy"/>
+        <activity android:name=".XacThucTaiKhoan"/>
+        <activity android:name=".Information_Account"/>
+        <activity android:name=".DangKy"/>
+        <activity android:name=".QuenMatKhau"/>
 
         <meta-data
             android:name="preloaded_fonts"

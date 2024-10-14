@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThanhtoanActivity"
+    android:orientation="vertical">
+
+    <!-- Ô chứa tiêu đề và nút quay lại -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_header"
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
+
+        <!-- Nút quay lại  -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="#FFFFFF"
+            android:layout_marginLeft="13dp"
+            android:layout_centerVertical="true" />
+
+        <!-- TextView tiêu đề -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/tvTieude1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/afacad_bold"
+                android:text="CÁM"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tvTieude2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/afacad_bold"
+                android:text="2D Lồng tiếng | 18:00"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgMovie_1"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cam"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/afacad_bold"
+                android:text="CÁM"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30/09/2024 (Thứ hai) 18:00\nGhế tiêu chuẩn: X vé (XXX.000 VNĐ/vé)\nGhế VIP: X vé (XXX.000 VNĐ/vé)\nRạp: Cantavil (TPHCM)"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:fontFamily="@font/afacad"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn phương thức thanh toán:"
+        android:textSize="23sp"
+        android:fontFamily="@font/afacad_bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <RadioButton
+            android:id="@+id/radioZalo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zalo"
+            android:fontFamily="@font/afacad"
+            android:textSize="17sp"/>
+
+        <RadioButton
+            android:id="@+id/radioMomo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Momo"
+            android:fontFamily="@font/afacad"
+            android:textSize="17sp"/>
+
+        <RadioButton
+            android:id="@+id/radioATM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ATM"
+            android:fontFamily="@font/afacad"
+            android:textSize="17sp"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <CheckBox
+            android:id="@+id/checkBoxTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Tôi đã đọc và đồng ý với Điều kiện và Điều khoản, cam kết mua vé xem phim cho người đúng độ tuổi quy định" />
+
+        <Button
+            android:id="@+id/buttonPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thanh toán"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
+            android:enabled="false"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -7,6 +7,7 @@ public class Phim {
         this.resourceID = resourceID;
     }
 
+    
     public int getResourceID() {
         return resourceID;
     }

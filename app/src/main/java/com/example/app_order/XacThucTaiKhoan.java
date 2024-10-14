@@ -1,5 +1,6 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -15,10 +16,15 @@ public class XacThucTaiKhoan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_xac_thuc_tai_khoan);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        findViewById(R.id.btnXacNhan).setOnClickListener(v -> {
+            showRegistrationSuccessDialog();
         });
+    }
+
+    private void showRegistrationSuccessDialog() {
+        RegistrationSuccessDialog registrationSuccessDialog = new RegistrationSuccessDialog();
+        registrationSuccessDialog.show(getSupportFragmentManager(), "registrationSuccessDialog");
+
     }
 }
