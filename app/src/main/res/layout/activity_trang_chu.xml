@@ -73,17 +73,14 @@
                <ImageView
                    android:layout_width="40dp"
                    android:layout_height="40dp"
-                   android:src="@drawable/filmroll">
-
-               </ImageView>
+                   android:src="@drawable/filmroll"/>
 
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Phim"
                    android:textColor="#fff"
-                   android:textStyle="bold"
-                   />
+                   android:textStyle="bold"/>
 
            </LinearLayout>
            <LinearLayout
@@ -97,9 +94,7 @@
                <ImageView
                    android:layout_width="40dp"
                    android:layout_height="40dp"
-                   android:src="@drawable/promotions">
-
-               </ImageView>
+                   android:src="@drawable/promotions"/>
 
                <TextView
                    android:layout_width="wrap_content"
@@ -141,9 +136,7 @@
                <ImageView
                    android:layout_width="40dp"
                    android:layout_height="40dp"
-                   android:src="@drawable/cinemascreen">
-
-               </ImageView>
+                   android:src="@drawable/cinemascreen"/>
 
                <TextView
                    android:layout_width="wrap_content"
@@ -155,18 +148,16 @@
 
            </LinearLayout>
            <LinearLayout
-               android:id="@+id/btnAccount"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="vertical"
                android:gravity="center">
 
                <ImageView
+                   android:id="@+id/btnAccount"
                    android:layout_width="40dp"
                    android:layout_height="40dp"
-                   android:src="@drawable/account">
-
-               </ImageView>
+                   android:src="@drawable/account"/>
 
                <TextView
                    android:layout_width="wrap_content"

@@ -1,5 +1,6 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -32,10 +33,25 @@ public class TrangChu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_trang_chu);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        findViewById(R.id.btnFilms).setOnClickListener(v -> {
+            Intent intent = new Intent(TrangChu.this, Cinema_Lineup.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btnPromotion).setOnClickListener(v -> {
+            Intent intent = new Intent(TrangChu.this, KhuyenmaiActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btnCinema).setOnClickListener(v -> {
+            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btnAccount).setOnClickListener(v -> {
+            Intent intent = new Intent(TrangChu.this, Information_Account.class);
+            startActivity(intent);
         });
 
         viewPager = findViewById(R.id.viewPager);

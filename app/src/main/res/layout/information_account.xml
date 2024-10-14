@@ -7,31 +7,37 @@
     android:background="#1A1A2E"
     android:padding="16dp">
 
-    <!-- Toolbar -->
-    <LinearLayout
-        android:id="@+id/btnBack"
+    <!-- Ô chứa tiêu đề và nút quay lại -->
+    <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:gravity="center_vertical">
+        android:background="@drawable/rounded_header"
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
 
-        <Button
+        <!-- Nút quay lại  -->
+        <ImageView
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:drawableStart="@drawable/ic_back_arrow"
-            android:drawableTint="@color/white"/>
+            android:src="@drawable/ic_back_arrow"
+            android:layout_marginTop="6dp"
+            app:tint="#FFFFFF"
+            android:layout_alignParentStart="true" />
 
+        <!-- TextView tiêu đề -->
         <TextView
+            android:id="@+id/tvTieude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/afacad_bold"
+            android:gravity="center"
             android:text="TÀI KHOẢN"
-            android:textSize="24sp"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:layout_marginStart="20dp" />
-    </LinearLayout>
+            android:textSize="30sp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 
     <!-- User Info -->
     <LinearLayout
