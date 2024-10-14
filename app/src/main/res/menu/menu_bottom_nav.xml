@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_film"
+        android:title="Phim"
+        android:icon="@drawable/filmroll" />
+    <item
+        android:id="@+id/menu_promotion"
+        android:title="Khuyến mãi"
+        android:icon="@drawable/promotions"/>
+    <item
+        android:title="logo"/>
+
+    <item
+        android:id="@+id/menu_cinema"
+        android:title="Rạp"
+        android:icon="@drawable/cinemascreen"/>
+    <item
+        android:id="@+id/menu_account"
+        android:title="Tài khoản"
+        android:icon="@drawable/account"/>
+</menu>
