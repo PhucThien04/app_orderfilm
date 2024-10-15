@@ -4,19 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.view.View;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.CompositePageTransformer;
-import androidx.viewpager2.widget.MarginPageTransformer;
-import androidx.viewpager2.widget.ViewPager2;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
@@ -37,8 +32,7 @@ public class TrangChu extends AppCompatActivity {
     private List<Photo> mListPhoto;
     private Timer timer;
     private SliderPhimAdapter slidephimAdapter;
-    private ViewPager2 mViewPagerFilm;
-    private List<Phim> mListPhim;
+    private ImageView imgView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +60,8 @@ public class TrangChu extends AppCompatActivity {
             startActivity(intent);
         });
 
-        AnhXa();
+        viewPager = findViewById(R.id.viewPager);
+        circleIndicator = findViewById(R.id.circle_indicator);
 
         mListPhoto = getListPhoto();
 
@@ -75,49 +70,17 @@ public class TrangChu extends AppCompatActivity {
 
         circleIndicator.setViewPager(viewPager);
         photoAdapter.registerDataSetObserver(circleIndicator.getDataSetObserver());
+
         photoAdapter = new PhotoAdapter(this, mListPhoto);
 
-        mViewPagerFilm.setOffscreenPageLimit(3);
-        mViewPagerFilm.setClipToPadding(false);
-        mViewPagerFilm.setClipChildren(false);
 
-        CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
-        compositePageTransformer.addTransformer(new MarginPageTransformer(20));
-        compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
-            @Override
-            public void transformPage(@NonNull View page, float position) {
-                float r = 1 - Math.abs(position);
-                page.setScaleY(0.85f + r * 0.15f);
-            }
-        });
-        mViewPagerFilm.setPageTransformer(compositePageTransformer);
-
-        mListPhim = getListPhim();
-        SliderPhimAdapter sliderPhimAdapter = new SliderPhimAdapter(mListPhim);
-        mViewPagerFilm.setAdapter(sliderPhimAdapter);
-
-
+        viewPagerFilm = findViewById(R.id.viewPager_film);
+        slidephimAdapter = new SliderPhimAdapter(this, getListPhim());
+        viewPagerFilm.setAdapter(slidephimAdapter);
 
         autoSlideImages();
 
         }
-    private List<Phim> getListPhim() {
-        List<Phim> list = new ArrayList<>();
-        list.add(new Phim(R.drawable.doanhcongduoctoi));
-        list.add(new Phim(R.drawable.hanhtrinhsolo));
-        list.add(new Phim(R.drawable.lookback));
-        list.add(new Phim(R.drawable.modomdom));
-        list.add(new Phim(R.drawable.cam));
-        list.add(new Phim(R.drawable.treuroiyeu));
-        list.add(new Phim(R.drawable.robothoangda));
-        list.add(new Phim(R.drawable.mada));
-        list.add(new Phim(R.drawable.caubecaheo));
-        list.add(new Phim(R.drawable.lamgiauvoima));
-
-        return list;
-    }
-
-
     private List<Photo> getListPhoto() {
         List<Photo> list = new ArrayList<>();
         list.add(new Photo(R.drawable.thobaymau));
@@ -127,6 +90,20 @@ public class TrangChu extends AppCompatActivity {
         return list;
         }
 
+    private List<Phim> getListPhim() {
+        List<Phim> ds = new ArrayList<>();
+        ds.add(new Phim(R.drawable.doanhcongduoctoi));
+        ds.add(new Phim(R.drawable.hanhtrinhsolo));
+        ds.add(new Phim(R.drawable.lookback));
+        ds.add(new Phim(R.drawable.modomdom));
+        ds.add(new Phim(R.drawable.lamgiauvoima));
+        ds.add(new Phim(R.drawable.treuroiyeu));
+        ds.add(new Phim(R.drawable.robothoangda));
+        ds.add(new Phim(R.drawable.mada));
+        ds.add(new Phim(R.drawable.caubecaheo));
+
+        return ds;
+    }
 
     private void autoSlideImages(){
         if(mListPhoto == null || mListPhoto.isEmpty() || viewPager == null){
@@ -162,11 +139,5 @@ public class TrangChu extends AppCompatActivity {
             timer.cancel();
             timer = null;
         }
-    }
-
-    private void AnhXa(){
-        viewPager = findViewById(R.id.viewPager);
-        circleIndicator = findViewById(R.id.circle_indicator);
-        mViewPagerFilm = findViewById(R.id.viewPager_film);
     }
 }
