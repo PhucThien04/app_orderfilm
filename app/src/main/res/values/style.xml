@@ -15,4 +15,9 @@
         <item name="android:background">@drawable/rounded_btnday_default</item>
         <item name="android:padding">10dp</item>
     </style>
+    
+    <style name="MenuTextAppearance">
+        <item name="android:textSize">20sp</item>
+        
+    </style>
 </resources>
