@@ -7,6 +7,7 @@ import android.text.method.PasswordTransformationMethod;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +34,7 @@ public class BaoMatTaiKhoan extends AppCompatActivity {
             Intent intent = new Intent(BaoMatTaiKhoan.this, ThongTin_CapNhatTaiKhoan.class);
             startActivity(intent);
         });
+
 
         edt_pass = (EditText) findViewById(R.id.editText_Pass);
 
