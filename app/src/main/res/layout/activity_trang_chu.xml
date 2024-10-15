@@ -38,11 +38,11 @@
         android:layout_below="@+id/sliderItem"
         android:layout_above="@+id/bottom_nav">
 
-        <androidx.viewpager.widget.ViewPager
+        <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager_film"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        </androidx.viewpager.widget.ViewPager>
+        </androidx.viewpager2.widget.ViewPager2>
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
