@@ -2,6 +2,7 @@ package com.example.app_order;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class XacThucTaiKhoan extends AppCompatActivity {
         findViewById(R.id.btnXacNhan).setOnClickListener(v -> {
             showRegistrationSuccessDialog();
         });
+
     }
 
     private void showRegistrationSuccessDialog() {
@@ -27,4 +29,6 @@ public class XacThucTaiKhoan extends AppCompatActivity {
         registrationSuccessDialog.show(getSupportFragmentManager(), "registrationSuccessDialog");
 
     }
+
+
 }

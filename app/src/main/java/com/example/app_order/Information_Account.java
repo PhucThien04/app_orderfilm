@@ -2,10 +2,12 @@ package com.example.app_order;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Information_Account  extends AppCompatActivity {
+    ImageView btnback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,13 @@ public class Information_Account  extends AppCompatActivity {
 
         findViewById(R.id.btnDeleteAccount).setOnClickListener(v -> {
             showDeleteAccountDialog();
+        });
+
+        btnback = findViewById(R.id.btnBack);
+
+        btnback.setOnClickListener(v -> {
+            Intent intent = new Intent(Information_Account.this, TrangChu.class);
+            startActivity(intent);
         });
     }
 

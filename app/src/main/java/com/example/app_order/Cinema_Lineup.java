@@ -1,8 +1,11 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +18,7 @@ public class Cinema_Lineup extends AppCompatActivity{
     ViewPager2 viewPager2;
     MoviePaperAdapter viewPaperAdapter;
     FrameLayout frameLayout;
+    ImageView btnback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +30,17 @@ public class Cinema_Lineup extends AppCompatActivity{
         viewPaperAdapter = new MoviePaperAdapter(this);
         viewPager2.setAdapter(viewPaperAdapter);
         frameLayout = findViewById(R.id.frameLayout);
+        btnback = findViewById(R.id.btnBack);
+
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Next = new Intent(Cinema_Lineup.this, TrangChu.class);
+                startActivity(Next);
+            }
+        });
+
+
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
