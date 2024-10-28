@@ -1,207 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<RelativeLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drawer_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:background="#1E1E2A">
 
-    <!-- Nội dung chính của ứng dụng -->
-    <RelativeLayout
-        android:id="@+id/main"
+    <LinearLayout
+        android:id="@+id/sliderItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="32dp">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/circle_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal">
+
+        </me.relex.circleindicator.CircleIndicator>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#1E1E2A">
+        android:orientation="vertical"
+        android:layout_below="@+id/sliderItem"
+        android:layout_above="@+id/bottom_nav">
 
-        <!-- Toolbar -->
-        <LinearLayout
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager_film"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
+        </androidx.viewpager2.widget.ViewPager2>
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/btnMenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/menu"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="32dp"/>
-        </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#1E1E2A"
+        app:cardCornerRadius="20dp">
 
-        <!-- Slider và ViewPager -->
-        <LinearLayout
-            android:id="@+id/sliderItem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="78dp">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:background="@drawable/color_bottom_nav"
+           android:gravity="center">
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewPager"
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:contentDescription="">
+           <LinearLayout
+               android:id="@+id/btnFilms"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center">
 
-            </androidx.viewpager.widget.ViewPager>
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/filmroll"/>
 
-            <me.relex.circleindicator.CircleIndicator
-                android:id="@+id/circle_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_gravity="center_horizontal">
-            </me.relex.circleindicator.CircleIndicator>
-        </LinearLayout>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Phim"
+                   android:textColor="#fff"
+                   android:textStyle="bold"/>
 
-        <!-- ViewPager Films -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_below="@+id/sliderItem"
-            android:layout_above="@+id/bottom_nav"
-            android:layout_marginTop="8dp">
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/btnPromotion"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:paddingLeft="10dp">
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPager_film"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:contentDescription="">
-            </androidx.viewpager2.widget.ViewPager2>
-        </LinearLayout>
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/promotions"/>
 
-        <!-- Bottom Navigation -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/bottom_nav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="#1E1E2A"
-            app:cardCornerRadius="20dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Khuyến mãi"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/color_bottom_nav"
-                android:gravity="center">
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/btnLogo"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp">
 
-            <LinearLayout
-                android:id="@+id/btnFilms"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+               <ImageView
+                   android:id="@+id/img_logo"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:src="@drawable/logo">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/filmroll"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Phim"
-                    android:textColor="#fff"
-                    android:textStyle="bold"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/btnPromotion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:paddingLeft="10dp">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/promotions"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Khuyến mãi"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    />
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/btnLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
-
-                <ImageView
-                    android:id="@+id/img_logo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/logo">
-
-                </ImageView>
+               </ImageView>
 
 
 
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/btnCinema"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:paddingRight="10dp">
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/btnCinema"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:paddingRight="10dp">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/cinemascreen"/>
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/cinemascreen"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rạp"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Rạp"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   />
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:gravity="center">
 
-                <ImageView
-                    android:id="@+id/btnAccount"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/account"/>
+               <ImageView
+                   android:id="@+id/btnAccount"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/account"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tài khoản"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Tài khoản"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   />
 
-            </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
+           </LinearLayout>
+       </LinearLayout>
 
-    <!-- NavigationView cho menu trượt -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/menu"
-        app:itemTextAppearance="@style/MenuTextAppearance"/>
+    </androidx.cardview.widget.CardView>
 
-</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+</RelativeLayout>
