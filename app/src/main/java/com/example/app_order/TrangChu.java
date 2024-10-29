@@ -24,10 +24,6 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.CenterCrop;
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-import com.bumptech.glide.request.RequestOptions;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -48,7 +44,6 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
     private List<Phim> mListPhim;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
-    private Toolbar Toolbar;
     private ImageView imgMenu;
 
 
