@@ -11,11 +11,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class TichDiem extends AppCompatActivity {
-    private ImageView buttonBack;
+public class TichDiemActivity extends AppCompatActivity {
+    private ImageView btn_back;
 
     private void AnhXa(){
-        buttonBack = findViewById(R.id.btnBack);
+        btn_back = findViewById(R.id.btnBack);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +30,10 @@ public class TichDiem extends AppCompatActivity {
 
         AnhXa();
 
-        buttonBack.setOnClickListener(new View.OnClickListener() {
+        btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Next = new Intent(TichDiem.this, TrangChu.class);
+                Intent Next = new Intent(TichDiemActivity.this, TrangChu.class);
                 startActivity(Next);
             }
         });

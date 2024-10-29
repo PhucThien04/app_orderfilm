@@ -2,6 +2,7 @@ package com.example.app_order;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,6 +16,7 @@ public class KhuyenmaiActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private ImageView btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +26,19 @@ public class KhuyenmaiActivity extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.tab_khuyenmai);
         viewPager = findViewById(R.id.khuyenmai_viewpager);
+        btn_back = findViewById(R.id.btnBack);
 
         KhuyenmaiViewPagerAdapter viewPagerAdapter = new KhuyenmaiViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(viewPagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
 
-        findViewById(R.id.btnBack).setOnClickListener(v -> {
-            Intent intent = new Intent(KhuyenmaiActivity.this, TrangChu.class);
-            startActivity(intent);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(KhuyenmaiActivity.this, TrangChu.class);
+                startActivity(intent);
+            }
         });
     }
 }

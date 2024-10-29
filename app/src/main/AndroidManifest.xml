@@ -13,16 +13,7 @@
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
         <activity
-            android:name=".HoanvethanhcongActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChitietdatveActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LichsudatveActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TrangChu"
+            android:name=".DangNhap"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,7 +47,12 @@
         <activity android:name=".XacThucTaiKhoan" />
         <activity android:name=".Information_Account" />
         <activity android:name=".DangKy" />
-        <activity android:name=".QuenMatKhau" /> <!-- <activity android:name=".TrangChu"/> -->
+        <activity android:name=".QuenMatKhau" />
+        <activity android:name=".TrangChu"/>
+        <activity android:name=".TichDiemActivity"/>
+        <activity android:name=".HoanvethanhcongActivity"/>
+        <activity android:name=".ChitietdatveActivity"/>
+        <activity android:name=".LichsudatveActivity"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

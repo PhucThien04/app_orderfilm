@@ -8,37 +8,36 @@
     tools:context=".ChitietkmActivity"
     android:orientation="vertical">
 
-    <!-- Ô chứa tiêu đề và nút quay lại -->
     <RelativeLayout
-        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_header"
-        android:padding="16dp"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:padding="16dp">
 
-        <!-- Nút quay lại  -->
+
         <ImageView
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
             android:src="@drawable/ic_back_arrow"
-            app:tint="#FFFFFF"
-            android:layout_marginLeft="13dp"
-            android:layout_alignParentStart="true" />
+            app:tint="#FFFFFF" />
 
-        <!-- TextView tiêu đề -->
         <TextView
-            android:id="@+id/tvTieude"
+            android:id="@+id/textView_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/afacad_bold"
-            android:gravity="center"
             android:text="KHUYẾN MÃI"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            android:layout_centerInParent="true" />
+            android:textSize="25sp"
+            android:fontFamily="@font/afacad_bold"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
     </RelativeLayout>
+
 
     <!--    <ImageView-->
     <!--        android:layout_width="wrap_content"-->
@@ -47,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
+        android:layout_margin="16dp"
         android:text="Mẫu thiết kế vĩ đại với giao diện dễ cầm nắm, bê nguyên cái đầu cute hột me, kèm vài thông số cụ thể như sau:\n
 ❣️ Dung tích 750ml\n
 ❣️ Gồm 02 phiên bản màu: hồng cá tra và xanh lá dứa\n

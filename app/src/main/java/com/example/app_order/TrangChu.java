@@ -7,17 +7,11 @@ import android.os.Looper;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import androidx.appcompat.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.CompositePageTransformer;
@@ -34,7 +28,7 @@ import java.util.TimerTask;
 import me.relex.circleindicator.CircleIndicator;
 
 public class TrangChu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-    private ViewPager viewPager, viewPagerFilm;
+    private ViewPager viewPager;
     private CircleIndicator circleIndicator;
     private PhotoAdapter photoAdapter;
     private List<Photo> mListPhoto;
@@ -136,7 +130,12 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
             return true;
         }
         if(id == R.id.btn_point){
-            Intent intent = new Intent(TrangChu.this, TichDiem.class);
+            Intent intent = new Intent(TrangChu.this, TichDiemActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        if(id == R.id.btn_refund){
+            Intent intent = new Intent(TrangChu.this, LichsudatveActivity.class);
             startActivity(intent);
             return true;
         }
