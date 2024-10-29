@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#1A1A2E"
-    android:padding="16dp">
+    android:background="#1A1A2E">
 
     <!-- Ô chứa tiêu đề và nút quay lại -->
     <RelativeLayout
@@ -22,8 +21,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back_arrow"
-            android:layout_marginTop="6dp"
             app:tint="#FFFFFF"
+            android:layout_marginLeft="13dp"
             android:layout_alignParentStart="true" />
 
         <!-- TextView tiêu đề -->
@@ -35,7 +34,7 @@
             android:gravity="center"
             android:text="VÉ ĐÃ HOÀN TRẢ"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:layout_centerInParent="true" />
     </RelativeLayout>
 
@@ -47,6 +46,7 @@
         android:textSize="16sp"
         android:textColor="@android:color/white"
         android:layout_gravity="center_horizontal"
-        android:paddingBottom="32dp" />
+        android:paddingBottom="32dp"
+        android:layout_margin="16dp"/>
 
 </LinearLayout>

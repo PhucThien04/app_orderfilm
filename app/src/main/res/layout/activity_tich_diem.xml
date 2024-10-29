@@ -8,36 +8,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+    <!-- Ô chứa tiêu đề và nút quay lại -->
     <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_header"
-        android:layout_alignParentTop="true"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
 
-
+        <!-- Nút quay lại  -->
         <ImageView
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="20dp"
             android:src="@drawable/ic_back_arrow"
-            app:tint="#FFFFFF" />
+            app:tint="#FFFFFF"
+            android:layout_marginLeft="13dp"
+            android:layout_alignParentStart="true" />
 
+        <!-- TextView tiêu đề -->
         <TextView
-            android:id="@+id/textView_Title"
+            android:id="@+id/tvTieude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/afacad_bold"
+            android:gravity="center"
             android:text="ĐIỂM THƯỞNG"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:fontFamily="@font/afacad"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"/>
-
+            android:textSize="25sp"
+            android:layout_centerInParent="true" />
     </RelativeLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
