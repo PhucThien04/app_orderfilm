@@ -18,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class BaoMatTaiKhoan extends AppCompatActivity {
     private EditText edt_pass;
     private boolean passVisible;
+    private ImageView btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,14 @@ public class BaoMatTaiKhoan extends AppCompatActivity {
                 return false;
             }
 
+        });
+        btn_back = findViewById(R.id.btnBack);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BaoMatTaiKhoan.this, Information_Account.class);
+                startActivity(intent);
+            }
         });
     }
 }

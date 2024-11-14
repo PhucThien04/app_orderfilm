@@ -17,7 +17,8 @@
             android:paddingTop="20dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:background="@drawable/bg_phim"
+            android:background="@drawable/bg_film"
+
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView

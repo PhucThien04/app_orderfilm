@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -39,6 +40,7 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ImageView imgMenu;
+    private Button btn_book;
 
 
     private void AnhXa(){
@@ -48,6 +50,7 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         navigationView = findViewById(R.id.nav_view);
         imgMenu = findViewById(R.id.btnMenu);
         drawerLayout = findViewById(R.id.drawer_layout);
+//        btn_book = findViewById(R.id.btn_book);
 
     }
     @Override
@@ -55,6 +58,8 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_trang_chu);
+
+        AnhXa();
 
         findViewById(R.id.btnFilms).setOnClickListener(v -> {
             Intent intent = new Intent(TrangChu.this, Cinema_Lineup.class);
@@ -75,8 +80,11 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
             Intent intent = new Intent(TrangChu.this, Information_Account.class);
             startActivity(intent);
         });
+//        btn_book.setOnClickListener(v -> {
+//            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+//            startActivity(intent);
+//        });
 
-        AnhXa();
 
         mListPhoto = getListPhoto();
 
