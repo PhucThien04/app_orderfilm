@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "5094272380",
+    "project_id": "apporderfilm-14fd9",
+    "storage_bucket": "apporderfilm-14fd9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5094272380:android:d8bc82271a0b3e2676c8f9",
+        "android_client_info": {
+          "package_name": "com.example.app_order"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy2a8QH64FAPSGMDAdfNnRujkINyr18Sk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
