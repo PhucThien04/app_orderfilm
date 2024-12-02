@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -37,6 +38,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -45,4 +51,10 @@ dependencies {
     implementation ("com.codesgood:justifiedtextview:1.1.0")
     implementation ("me.relex:circleindicator:2.1.6")
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
+    implementation ("com.google.firebase:firebase-database:21.0.0")
+    // Firebase BOM (quản lý phiên bản Firebase)
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
+    // Firebase Analytics
+    implementation("com.google.firebase:firebase-analytics")
 }

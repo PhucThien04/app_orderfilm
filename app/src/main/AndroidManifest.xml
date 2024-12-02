@@ -13,6 +13,9 @@
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
         <activity
+            android:name=".KhuyenmaiDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".HoanvethanhcongActivity"
             android:exported="false" />
         <activity
@@ -22,7 +25,7 @@
             android:name=".LichsudatveActivity"
             android:exported="false" />
         <activity
-            android:name=".TrangChu"
+            android:name=".DangNhap"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,8 +48,7 @@
         <activity android:name=".DangKyThongTinCaNhan" />
         <activity android:name=".DatgheActivity" />
         <activity android:name=".DiachiActivity" />
-        <activity android:name=".DoiMatKhau" />
-        <activity android:name=".KhuyenmaiActivity" />
+        <activity android:name=".DoiMatKhau" /> <!-- <activity android:name=".KhuyenmaiActivity" /> -->
         <activity android:name=".RapphimActivity" />
         <activity android:name=".ThanhcongActivity" />
         <activity android:name=".ThanhtoanActivity" />

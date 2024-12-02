@@ -1,61 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".KmRapFragment"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/btnKMrap1"
+    <ListView
+        android:id="@+id/listViewRap"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="#FFFCF0"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tvKMrap1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/afacad_bold"
-            android:textSize="25sp"
-            android:layout_margin="5dp"
-            android:text="ƯU ĐÃI GIÁ SỐC 65-70K TẠI LOTTE CINEMA HÀ ĐÔNG" />
-
-        <TextView
-            android:id="@+id/tvKMraptg1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="13/11/2023 - 31/12/2024" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/btnKMrap2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="#FFFCF0"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tvKMrap2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/afacad_bold"
-            android:textSize="25sp"
-            android:layout_margin="5dp"
-            android:text="ƯU ĐÃI GIÁ SỐC 65-70K TẠI LOTTE CINEMA HẢI PHÒNG" />
-
-        <TextView
-            android:id="@+id/tvKMraptg2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="13/11/2023 - 31/12/2024" />
-
-    </LinearLayout>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
