@@ -42,7 +42,6 @@
         <activity android:name=".PaymentPolicyActivity" />
         <activity android:name=".RefundHistoryActivity" />
         <activity android:name=".TransactionsActivity" />
-        <activity android:name=".ChitietkmActivity" />
         <activity android:name=".ChitietrapphimActivity" />
         <activity android:name=".Cinema_Lineup" />
         <activity android:name=".DangKyThongTinCaNhan" />
