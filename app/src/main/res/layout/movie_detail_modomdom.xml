@@ -22,8 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back_arrow"
-            android:layout_marginTop="6dp"
             app:tint="#FFFFFF"
+            android:layout_marginLeft="13dp"
             android:layout_alignParentStart="true" />
 
         <!-- TextView tiêu đề -->
@@ -35,7 +35,7 @@
             android:gravity="center"
             android:text="MỘ ĐOM ĐÓM"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:layout_centerInParent="true" />
     </RelativeLayout>
 
@@ -136,6 +136,7 @@
         android:text="Tóm tắt"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:layout_marginLeft="16dp"
         android:fontFamily="@font/afacad"/>
 
     <TextView
@@ -144,8 +145,8 @@
         android:layout_height="wrap_content"
         android:text="Một bộ phim hoạt hình Nhật Bản ra mắt năm 1988, do đạo diễn Isao Takahata thực hiện, dựa trên tiểu thuyết cùng tên của Akiyuki Nosaka. Phim kể về hai anh em Seita và Setsuko trong bối cảnh Nhật Bản vào giai đoạn cuối Thế Chiến II. Sau khi mất mẹ do một trận ném bom, hai đứa trẻ phải tự sống sót trong một xã hội đang sụp đổ vì chiến tranh. Seita cố gắng chăm sóc em gái Setsuko trong khi cuộc sống ngày càng khó khăn. Mặc dù nỗ lực hết mình, nhưng vì thiếu thức ăn và sự giúp đỡ, Setsuko yếu dần và cuối cùng qua đời. Seita, sau khi mất em, cũng không thể sống sót. Phim tập trung khắc họa sự đau thương của chiến tranh và sự mất mát từ góc nhìn của trẻ em."
         android:textColor="#FFFFFF"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/afacad"/>
+        android:layout_margin="16dp"
+        android:fontFamily="@font/afacad_bold"/>
 
     <Button
         android:id="@+id/btnBookTicket"
@@ -155,7 +156,7 @@
         android:fontFamily="@font/afacad"
         android:background="@drawable/bg_button_red"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="24dp"
+        android:layout_margin="16dp"
         android:padding="12dp"
         android:textSize="18sp" />
 

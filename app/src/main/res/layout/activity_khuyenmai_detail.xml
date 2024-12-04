@@ -1,76 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".KhuyenmaiDetailActivity">
+    tools:context=".ChitietkmActivity"
+    android:orientation="vertical">
 
-    <!-- Ô chứa tiêu đề và nút quay lại -->
     <RelativeLayout
-        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_header"
-        android:padding="16dp"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:padding="16dp">
 
-        <!-- Nút quay lại  -->
+
         <ImageView
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
             android:src="@drawable/ic_back_arrow"
-            app:tint="#FFFFFF"
-            android:layout_marginLeft="13dp"
-            android:layout_alignParentStart="true" />
+            app:tint="#FFFFFF" />
 
-        <!-- TextView tiêu đề -->
         <TextView
-            android:id="@+id/tvTieude"
+            android:id="@+id/textView_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/afacad_bold"
-            android:gravity="center"
             android:text="KHUYẾN MÃI"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            android:layout_centerInParent="true" />
+            android:textSize="25sp"
+            android:fontFamily="@font/afacad_bold"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
     </RelativeLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- Tiêu đề khuyến mãi -->
-            <TextView
-                android:id="@+id/tvDetailTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:textSize="28sp"
-                android:fontFamily="@font/afacad_bold"
-                android:padding="16dp"
-                android:gravity="center" />
-
-            <!-- Mô tả khuyến mãi -->
-            <TextView
-                android:id="@+id/tvDetailDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="#000000"
-                android:padding="8dp"
-                android:lineSpacingExtra="5dp" />
-        </LinearLayout>
-    </ScrollView>
+    <!--    <ImageView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"/>-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        android:text="Mẫu thiết kế vĩ đại với giao diện dễ cầm nắm, bê nguyên cái đầu cute hột me, kèm vài thông số cụ thể như sau:\n
+❣️ Dung tích 750ml\n
+❣️ Gồm 02 phiên bản màu: hồng cá tra và xanh lá dứa\n
+❣️ Phần thân được thiết kế cách nhiệt, cứng cáp với 02 lớp inox\n
+❣️ Trang bị thêm miếng mút cao su chống nóng lạnh ngay đầu hút\n
+❣️ Phần đầu có thể tháo rời, dễ vệ sinh\n
+ \n
+✅ Sản phẩm được bán kèm set combo bắp nước... với giá cực iu thương:\n
+COMBO 230.000Đ:  01* Ly Thỏ 7 Màu (Tùy chọn màu)  \n
+COMBO 260.000Đ:  01* Ly Thỏ 7 Màu (Tùy chọn màu)  +  01* Bắp và Nước\n
+👌 Sẽ mở bán tại tất cả cụm rạp LOTTE trên toàn quốc trong thời gian tới"/>
 
 </LinearLayout>
