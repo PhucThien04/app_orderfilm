@@ -72,7 +72,7 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         });
 
         findViewById(R.id.btnCinema).setOnClickListener(v -> {
-            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+            Intent intent = new Intent(TrangChu.this, RapActivity.class);
             startActivity(intent);
         });
 
@@ -133,7 +133,7 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.btn_buyticket){
-            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+            Intent intent = new Intent(TrangChu.this, RapActivity.class);
             startActivity(intent);
             return true;
         }
@@ -148,7 +148,7 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
             return true;
         }
         if(id == R.id.btn_cinema){
-            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+            Intent intent = new Intent(TrangChu.this, RapActivity.class);
             startActivity(intent);
             return true;
         }

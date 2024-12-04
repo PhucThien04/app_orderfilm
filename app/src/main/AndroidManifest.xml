@@ -30,14 +30,13 @@
         <activity android:name=".PaymentPolicyActivity" />
         <activity android:name=".RefundHistoryActivity" />
         <activity android:name=".TransactionsActivity" />
-        <activity android:name=".ChitietkmActivity" />
         <activity android:name=".ChitietrapphimActivity" />
         <activity android:name=".Cinema_Lineup" />
         <activity android:name=".DatgheActivity" />
         <activity android:name=".DiachiActivity" />
         <activity android:name=".DoiMatKhau" />
         <activity android:name=".KhuyenmaiActivity" />
-        <activity android:name=".RapphimActivity" />
+        <activity android:name=".RapActivity" />
         <activity android:name=".ThanhcongActivity" />
         <activity android:name=".ThanhtoanActivity" />
         <activity android:name=".ThongBao" />

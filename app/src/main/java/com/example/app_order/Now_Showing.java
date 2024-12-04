@@ -38,11 +38,11 @@ public class Now_Showing extends Fragment {
             startActivity(intent);
         });
         view.findViewById(R.id.btnBuyTicket_1).setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), RapphimActivity.class);
+            Intent intent = new Intent(getActivity(), RapActivity.class);
             startActivity(intent);
         });
         view.findViewById(R.id.btnBuyTicket_2).setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), RapphimActivity.class);
+            Intent intent = new Intent(getActivity(), RapActivity.class);
             startActivity(intent);
         });
         return view;
