@@ -16,6 +16,9 @@
             android:name=".RapDetailActivity"
             android:exported="false" />
         <activity
+            android:name=".RapphimActivity"
+            android:exported="false" />
+        <activity
             android:name=".KhuyenmaiDetailActivity"
             android:exported="false" />
         <activity
