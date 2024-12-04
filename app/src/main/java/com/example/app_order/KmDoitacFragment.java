@@ -42,15 +42,15 @@ public class KmDoitacFragment extends Fragment {
         listView.setAdapter(adapter);
 
         // Kết nối Firebase
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("khuyenmai/doitac");
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("KhuyenMai/DoiTac");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 khuyenMaiList.clear();
                 khuyenMaiMota.clear();
                 for (DataSnapshot childSnapshot : snapshot.getChildren()) {
-                    String tieude = childSnapshot.child("tieude").getValue(String.class);
-                    String mota = childSnapshot.child("mota").getValue(String.class);
+                    String tieude = childSnapshot.child("TieuDe").getValue(String.class);
+                    String mota = childSnapshot.child("MoTa").getValue(String.class);
 
                     khuyenMaiList.add(tieude);
                     khuyenMaiMota.add(mota);
@@ -72,8 +72,8 @@ public class KmDoitacFragment extends Fragment {
 
             // Chuyển sang KhuyenmaiDetailActivity
             Intent intent = new Intent(requireContext(), KhuyenmaiDetailActivity.class);
-            intent.putExtra("tieude", tieude);
-            intent.putExtra("mota", mota);
+            intent.putExtra("TieuDe", tieude);
+            intent.putExtra("MoTa", mota);
             startActivity(intent);
         });
 

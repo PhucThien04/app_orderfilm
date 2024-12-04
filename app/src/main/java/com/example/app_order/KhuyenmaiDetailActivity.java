@@ -31,8 +31,8 @@ public class KhuyenmaiDetailActivity extends AppCompatActivity {
         TextView tvDescription = findViewById(R.id.tvDetailDescription);
 
         // Lấy dữ liệu từ Intent
-        String tieude = getIntent().getStringExtra("tieude");
-        String mota = getIntent().getStringExtra("mota");
+        String tieude = getIntent().getStringExtra("TieuDe");
+        String mota = getIntent().getStringExtra("MoTa");
         // Xử lý ký tự xuống dòng
         if (mota != null) {
             mota = mota.replace("\\n", "\n");
