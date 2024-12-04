@@ -1,5 +1,6 @@
 package com.example.app_order;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -103,9 +104,13 @@ public class RapActivity extends AppCompatActivity {
         // Nút tiếp tục
         btnTieptuc.setOnClickListener(v -> {
             if (selectedRap != null) {
-                Toast.makeText(this, "Đã chọn rạp: " + selectedRap, Toast.LENGTH_SHORT).show();
+                // Nếu đã chọn rạp, chuyển sang RapDetailActivity
+                Intent intent = new Intent(RapActivity.this, RapDetailActivity.class);
+                intent.putExtra("tenRap", selectedRap);  // Truyền tên rạp vào Intent
+                startActivity(intent);
             } else {
-                Toast.makeText(this, "Vui lòng chọn một rạp!", Toast.LENGTH_SHORT).show();
+                // Nếu chưa chọn rạp, hiển thị thông báo
+                Toast.makeText(this, "Vui lòng chọn một rạp phim!", Toast.LENGTH_SHORT).show();
             }
         });
     }

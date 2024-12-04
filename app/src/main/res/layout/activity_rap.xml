@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/afacad_bold"
             android:gravity="center"
-            android:text="MUA VÉ"
+            android:text="RẠP PHIM"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:layout_centerInParent="true" />
