@@ -2,7 +2,6 @@ package com.example.app_order;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
@@ -10,9 +9,6 @@ import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Calendar;
 
@@ -52,7 +48,7 @@ public class DangKyThongTinCaNhan extends AppCompatActivity {
 
     }
     private void AnhXa(){
-        edTxt_Date = (EditText) findViewById(R.id.editText_ngaySinh);
+        edTxt_Date = (EditText) findViewById(R.id.editText_dateOfBirth);
 
     }
 }
