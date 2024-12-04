@@ -10,13 +10,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        app:cardCornerRadius="16dp"
-        android:layout_marginTop="48dp">
+        app:cardCornerRadius="16dp">
 
         <ImageView
             android:id="@+id/img_thobaymau"
-            android:layout_width="360dp"
-            android:layout_height="200dp"
+            android:layout_width="320dp"
+            android:layout_height="180dp"
             android:scaleType="centerCrop"
             android:src="@drawable/thobaymau" />
     </androidx.cardview.widget.CardView>

@@ -27,7 +27,7 @@
             android:fontFamily="@font/afacad_bold"
             android:text="HOÀN VÉ THÀNH CÔNG"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"/>
+            android:textSize="25sp"/>
 
     </RelativeLayout>
 

@@ -22,8 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back_arrow"
-            android:layout_marginTop="6dp"
             app:tint="#FFFFFF"
+            android:layout_marginLeft="13dp"
             android:layout_alignParentStart="true" />
 
         <!-- TextView tiêu đề -->
@@ -35,7 +35,7 @@
             android:gravity="center"
             android:text="MA DA"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:layout_centerInParent="true" />
     </RelativeLayout>
 
@@ -136,6 +136,7 @@
         android:text="Tóm tắt"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:layout_marginLeft="16dp"
         android:fontFamily="@font/afacad"/>
 
     <TextView
@@ -144,7 +145,7 @@
         android:layout_height="wrap_content"
         android:text="Bộ phim xoay quanh câu chuyện của bà Lệ, một người phụ nữ làm nghề vớt xác bên bờ sông. Câu chuyện bắt đầu khi bà Lệ mất chồng do đuối nước khi đang mang thai bé Nhung. Sau khi chồng bà được vớt lên một cách kỳ lạ, bà tiếp tục công việc vớt xác như một cái nghiệp, dù bị bạn bè, người thân khuyên ngăn. Bộ phim khai thác sâu về nghề vớt xác và sự ranh giới giữa sự sống và cái chết, với những yếu tố ma quái từ truyền thuyết dân gian về ma da – linh hồn kéo người chết đuối dưới sông. Phim cũng làm nổi bật tình cảm mẹ con giữa bà Lệ và bé Nhung, với những tình tiết thể hiện sự gắn kết giữa hai người trong bối cảnh u ám và đầy nguy hiểm. Bé Nhung, trong một lần tình cờ, nhặt được một con búp bê bí ẩn – một chi tiết quen thuộc của thể loại kinh dị."
         android:textColor="#FFFFFF"
-        android:layout_marginTop="16dp"
+        android:layout_margin="16dp"
         android:fontFamily="@font/afacad"/>
 
     <Button
@@ -152,10 +153,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đặt vé"
-        android:fontFamily="@font/afacad"
+        android:fontFamily="@font/afacad_bold"
         android:background="@drawable/bg_button_red"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="24dp"
+        android:layout_margin="16dp"
         android:padding="12dp"
         android:textSize="18sp" />
 

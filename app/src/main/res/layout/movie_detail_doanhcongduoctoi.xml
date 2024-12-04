@@ -22,8 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back_arrow"
-            android:layout_marginTop="6dp"
             app:tint="#FFFFFF"
+            android:layout_marginLeft="13dp"
             android:layout_alignParentStart="true" />
 
         <!-- TextView tiêu đề -->
@@ -33,9 +33,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/afacad_bold"
             android:gravity="center"
-            android:text="ĐỐ ANH CÒNG ĐƯỢC TÔI"
+            android:text=" ĐỐ ANH CÒNG ĐƯỢC TÔI"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:layout_centerInParent="true" />
     </RelativeLayout>
 
@@ -136,7 +136,8 @@
         android:text="Tóm tắt"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        android:fontFamily="@font/afacad"/>
+        android:fontFamily="@font/afacad"
+        android:layout_marginLeft="16dp"/>
 
     <TextView
         android:id="@+id/text_movie_summary"
@@ -144,7 +145,7 @@
         android:layout_height="wrap_content"
         android:text="Các thanh tra kỳ cựu nổi tiếng đã hoạt động trở lại! Thám tử Seo Do-cheol (HWANG Jung-min) và đội điều tra tội phạm nguy hiểm của anh không ngừng truy lùng tội phạm cả ngày lẫn đêm, đặt cược cả cuộc sống cá nhân của họ. Nhận một vụ án sát hại một giáo sư, đội thanh tra nhận ra những mối liên hệ với các vụ án trong quá khứ và nảy sinh những nghi ngờ về một kẻ giết người hàng loạt. Điều này đã khiến cả nước rơi vào tình trạng hỗn loạn. Khi đội thanh tra đi sâu vào cuộc điều tra, kẻ sát nhân đã chế nhạo họ bằng cách công khai tung ra một đoạn giới thiệu trực tuyến, chỉ ra nạn nhân tiếp theo và làm gia tăng sự hỗn loạn. Để giải quyết mối đe dọa ngày càng leo thang, nhóm đã kết nạp một sĩ quan tân binh trẻ Park Sun-woo (JUNG Hae-in), dẫn đến những khúc mắc và đầy rẫy bất ngờ trong vụ án."
         android:textColor="#FFFFFF"
-        android:layout_marginTop="16dp"
+        android:layout_margin="16dp"
         android:fontFamily="@font/afacad"/>
 
     <Button
@@ -152,10 +153,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đặt vé"
-        android:fontFamily="@font/afacad"
+        android:fontFamily="@font/afacad_bold"
         android:background="@drawable/bg_button_red"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="24dp"
+        android:layout_margin="16dp"
         android:padding="12dp"
         android:textSize="18sp" />
 

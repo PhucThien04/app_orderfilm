@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#1A1A2E"
-    android:padding="16dp">
+    android:background="#1A1A2E">
 
     <!-- Ô chứa tiêu đề và nút quay lại -->
     <RelativeLayout
@@ -35,7 +34,7 @@
             android:gravity="center"
             android:text="VÉ ĐÃ MUA"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:layout_centerInParent="true" />
     </RelativeLayout>
 
@@ -47,7 +46,7 @@
         android:textSize="16sp"
         android:textColor="@android:color/white"
         android:layout_gravity="center_horizontal"
-        android:paddingBottom="32dp" />
+        android:paddingTop="32dp" />
 
     <ImageView
         android:id="@+id/ivIcon"
@@ -56,7 +55,7 @@
         android:background="@drawable/baseline_airplane_ticket_24"
         android:backgroundTint="@color/white"
         android:layout_gravity="center_horizontal"
-        android:paddingBottom="16dp" />
+        android:paddingBottom="16dp"/>
 
     <Button
         android:id="@+id/btnBookNow"
@@ -65,6 +64,8 @@
         android:text="Đặt vé ngay bạn nhé!"
         android:background="@drawable/btn_back_red"
         android:textColor="@android:color/white"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
 
 </LinearLayout>

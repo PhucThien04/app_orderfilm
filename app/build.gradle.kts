@@ -30,6 +30,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,7 +45,6 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
-    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -52,9 +54,9 @@ dependencies {
     implementation ("me.relex:circleindicator:2.1.6")
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
 
-    implementation ("com.google.firebase:firebase-database:21.0.0")
-    // Firebase BOM (quản lý phiên bản Firebase)
     implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
-    // Firebase Analytics
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
+    implementation ("com.google.firebase:firebase-database:20.4.2")
 }

@@ -4,15 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +28,8 @@ import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class TrangChu extends AppCompatActivity {
-    private ViewPager viewPager, viewPagerFilm;
+public class TrangChu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+    private ViewPager viewPager;
     private CircleIndicator circleIndicator;
     private PhotoAdapter photoAdapter;
     private List<Photo> mListPhoto;
@@ -30,12 +37,29 @@ public class TrangChu extends AppCompatActivity {
     private SliderPhimAdapter slidephimAdapter;
     private ViewPager2 mViewPagerFilm;
     private List<Phim> mListPhim;
+    private NavigationView navigationView;
+    private DrawerLayout drawerLayout;
+    private ImageView imgMenu;
+    private Button btn_book;
 
+
+    private void AnhXa(){
+        viewPager = findViewById(R.id.viewPager);
+        circleIndicator = findViewById(R.id.circle_indicator);
+        mViewPagerFilm = findViewById(R.id.viewPager_film);
+        navigationView = findViewById(R.id.nav_view);
+        imgMenu = findViewById(R.id.btnMenu);
+        drawerLayout = findViewById(R.id.drawer_layout);
+//        btn_book = findViewById(R.id.btn_book);
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_trang_chu);
+
+        AnhXa();
 
         findViewById(R.id.btnFilms).setOnClickListener(v -> {
             Intent intent = new Intent(TrangChu.this, Cinema_Lineup.class);
@@ -48,7 +72,7 @@ public class TrangChu extends AppCompatActivity {
         });
 
         findViewById(R.id.btnCinema).setOnClickListener(v -> {
-            Intent intent = new Intent(TrangChu.this, RapActivity.class);
+            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
             startActivity(intent);
         });
 
@@ -56,8 +80,11 @@ public class TrangChu extends AppCompatActivity {
             Intent intent = new Intent(TrangChu.this, Information_Account.class);
             startActivity(intent);
         });
+//        btn_book.setOnClickListener(v -> {
+//            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+//            startActivity(intent);
+//        });
 
-        AnhXa();
 
         mListPhoto = getListPhoto();
 
@@ -87,11 +114,47 @@ public class TrangChu extends AppCompatActivity {
         SliderPhimAdapter sliderPhimAdapter = new SliderPhimAdapter(mListPhim);
         mViewPagerFilm.setAdapter(sliderPhimAdapter);
 
-
-
         autoSlideImages();
 
+       navigationView.setItemIconTintList(null);
+       navigationView.setNavigationItemSelectedListener(this);
+
+
+        imgMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.btn_buyticket){
+            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+            startActivity(intent);
+            return true;
         }
+        if(id == R.id.btn_point){
+            Intent intent = new Intent(TrangChu.this, TichDiemActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        if(id == R.id.btn_refund){
+            Intent intent = new Intent(TrangChu.this, LichsudatveActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        if(id == R.id.btn_cinema){
+            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return false;
+    }
+
     private List<Phim> getListPhim() {
         List<Phim> list = new ArrayList<>();
         list.add(new Phim(R.drawable.doanhcongduoctoi));
@@ -155,9 +218,5 @@ public class TrangChu extends AppCompatActivity {
         }
     }
 
-    private void AnhXa(){
-        viewPager = findViewById(R.id.viewPager);
-        circleIndicator = findViewById(R.id.circle_indicator);
-        mViewPagerFilm = findViewById(R.id.viewPager_film);
-    }
+
 }
