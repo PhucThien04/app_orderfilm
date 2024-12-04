@@ -18,7 +18,7 @@ public class DetailMovie_MaDa extends AppCompatActivity {
         });
 
         findViewById(R.id.btnBookTicket).setOnClickListener(v -> {
-            Intent intent = new Intent(DetailMovie_MaDa.this, RapphimActivity.class);
+            Intent intent = new Intent(DetailMovie_MaDa.this, RapActivity.class);
             startActivity(intent);
         });
     }

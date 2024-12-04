@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         khuVucRapMap = new HashMap<>();
 
         // Khu vực adapter với layout tùy chỉnh
-        khuVucAdapter = new ArrayAdapter<String>(this, R.layout.activity_itemrapphim, R.id.tvItem, khuVucList) {
+        khuVucAdapter = new ArrayAdapter<String>(this, R.layout.item_rap, R.id.tvItem, khuVucList) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 TextView textView = (TextView) super.getView(position, convertView, parent);
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         // Rạp adapter với layout tùy chỉnh
-        rapAdapter = new ArrayAdapter<String>(this, R.layout.activity_itemrapphim, R.id.tvItem, rapList) {
+        rapAdapter = new ArrayAdapter<String>(this, R.layout.item_rap, R.id.tvItem, rapList) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 TextView textView = (TextView) super.getView(position, convertView, parent);
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             if (selectedRap == null) {
                 Toast.makeText(MainActivity.this, "Vui lòng chọn một rạp!", Toast.LENGTH_SHORT).show();
             } else {
-                Intent intent = new Intent(MainActivity.this, RapDetailActivity.class);
+                Intent intent = new Intent(MainActivity.this, ChitietrapphimActivity.class);
                 intent.putExtra("tenRap", selectedRap);
                 startActivity(intent);
             }

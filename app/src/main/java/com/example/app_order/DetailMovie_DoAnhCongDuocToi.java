@@ -19,7 +19,7 @@ public class DetailMovie_DoAnhCongDuocToi extends AppCompatActivity {
         });
 
         findViewById(R.id.btnBookTicket).setOnClickListener(v -> {
-            Intent intent = new Intent(DetailMovie_DoAnhCongDuocToi.this, RapphimActivity.class);
+            Intent intent = new Intent(DetailMovie_DoAnhCongDuocToi.this, RapActivity.class);
             startActivity(intent);
         });
     }

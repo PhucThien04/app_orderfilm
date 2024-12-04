@@ -48,7 +48,7 @@ public class TrangChu extends AppCompatActivity {
         });
 
         findViewById(R.id.btnCinema).setOnClickListener(v -> {
-            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+            Intent intent = new Intent(TrangChu.this, RapActivity.class);
             startActivity(intent);
         });
 

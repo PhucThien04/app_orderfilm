@@ -18,7 +18,7 @@ public class DetailMovie_Cam extends AppCompatActivity {
         });
 
         findViewById(R.id.btnBookTicket).setOnClickListener(v -> {
-            Intent intent = new Intent(DetailMovie_Cam.this, RapphimActivity.class);
+            Intent intent = new Intent(DetailMovie_Cam.this, RapActivity.class);
             startActivity(intent);
         });
     }

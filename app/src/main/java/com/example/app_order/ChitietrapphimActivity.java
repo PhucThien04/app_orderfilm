@@ -20,6 +20,7 @@ public class ChitietrapphimActivity extends AppCompatActivity {
     // Nút
     private ImageView btnBack;
     private TextView btnDiachi;
+    private TextView tvRap;
 
     private Button selectedButton;
 
@@ -36,7 +37,7 @@ public class ChitietrapphimActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Back = new Intent(ChitietrapphimActivity.this, RapphimActivity.class);
+                Intent Back = new Intent(ChitietrapphimActivity.this, RapActivity.class);
                 startActivity(Back);
             }
         });
@@ -48,7 +49,12 @@ public class ChitietrapphimActivity extends AppCompatActivity {
                 startActivity(Dchi);
             }
         });
+        TextView textViewRap = findViewById(R.id.tvTieude);
+        String tenRap = getIntent().getStringExtra("tenRap");
 
+        if (tenRap != null) {
+            textViewRap.setText(tenRap);
+        }
         // Thiết lập nút mặc định được chọn
         selectedButton = findViewById(R.id.btnMonday);
         selectedButton.setBackgroundResource(R.drawable.rounded_btnday_selected);

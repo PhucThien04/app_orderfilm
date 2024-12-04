@@ -103,7 +103,7 @@ public class RapActivity extends AppCompatActivity {
             if (selectedRap == null) {
                 Toast.makeText(RapActivity.this, "Vui lòng chọn một rạp!", Toast.LENGTH_SHORT).show();
             } else {
-                Intent intent = new Intent(RapActivity.this, RapDetailActivity.class);
+                Intent intent = new Intent(RapActivity.this, ChitietrapphimActivity.class);
                 intent.putExtra("tenRap", selectedRap);
                 startActivity(intent);
             }

@@ -19,7 +19,7 @@ public class DetailMovie_Modomdom extends AppCompatActivity {
         });
 
         findViewById(R.id.btnBookTicket).setOnClickListener(v -> {
-            Intent intent = new Intent(DetailMovie_Modomdom.this, RapphimActivity.class);
+            Intent intent = new Intent(DetailMovie_Modomdom.this, RapActivity.class);
             startActivity(intent);
         });
     }
