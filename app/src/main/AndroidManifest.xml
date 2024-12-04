@@ -33,7 +33,6 @@
         <activity android:name=".ChitietkmActivity" />
         <activity android:name=".ChitietrapphimActivity" />
         <activity android:name=".Cinema_Lineup" />
-        <activity android:name=".DangKyThongTinCaNhan" />
         <activity android:name=".DatgheActivity" />
         <activity android:name=".DiachiActivity" />
         <activity android:name=".DoiMatKhau" />
