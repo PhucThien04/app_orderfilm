@@ -13,7 +13,7 @@
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
         <activity
-            android:name=".DangNhap"
+            android:name=".DangKy"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,13 +30,12 @@
         <activity android:name=".PaymentPolicyActivity" />
         <activity android:name=".RefundHistoryActivity" />
         <activity android:name=".TransactionsActivity" />
-        <activity android:name=".KhuyenmaiDetailActivity" />
         <activity android:name=".ChitietrapphimActivity" />
         <activity android:name=".Cinema_Lineup" />
         <activity android:name=".DatgheActivity" />
         <activity android:name=".DiachiActivity" />
         <activity android:name=".DoiMatKhau" />
-        <activity android:name=".KhuyenmaiActivity" android:exported="true" />
+        <activity android:name=".KhuyenmaiActivity" />
         <activity android:name=".RapActivity" />
         <activity android:name=".ThanhcongActivity" />
         <activity android:name=".ThanhtoanActivity" />
@@ -52,7 +51,6 @@
         <activity android:name=".HoanvethanhcongActivity"/>
         <activity android:name=".ChitietdatveActivity"/>
         <activity android:name=".LichsudatveActivity"/>
-        <activity android:name=".DangKy"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
