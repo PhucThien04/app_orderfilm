@@ -118,7 +118,7 @@ public class RapActivity extends AppCompatActivity {
                 khuVucList.clear();
                 khuVucRapMap.clear();
                 for (DataSnapshot khuVucSnapshot : snapshot.getChildren()) {
-                    String khuVucTen = khuVucSnapshot.child("ten").getValue(String.class);
+                    String khuVucTen = khuVucSnapshot.child("tenkv").getValue(String.class);
                     if (khuVucTen != null) {
                         khuVucList.add(khuVucTen);
 
