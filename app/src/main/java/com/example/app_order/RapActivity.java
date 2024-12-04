@@ -1,11 +1,11 @@
 package com.example.app_order;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -49,23 +49,20 @@ public class RapActivity extends AppCompatActivity {
         rapList = new ArrayList<>();
         khuVucRapMap = new HashMap<>();
 
-        // Khu vực adapter với layout tùy chỉnh
+        // Tạo adapter
         khuVucAdapter = new ArrayAdapter<String>(this, R.layout.item_rap, R.id.tvItem, khuVucList) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 TextView textView = (TextView) super.getView(position, convertView, parent);
                 if (position == selectedKhuVucIndex) {
                     textView.setBackgroundColor(Color.parseColor("#FFF8E1"));
-                    textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
                 } else {
                     textView.setBackgroundColor(Color.WHITE);
-                    textView.setTypeface(textView.getTypeface(), Typeface.NORMAL);
                 }
                 return textView;
             }
         };
 
-        // Rạp adapter với layout tùy chỉnh
         rapAdapter = new ArrayAdapter<String>(this, R.layout.item_rap, R.id.tvItem, rapList) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -73,11 +70,9 @@ public class RapActivity extends AppCompatActivity {
                 if (rapList.get(position).equals(selectedRap)) {
                     textView.setBackgroundColor(Color.BLACK);
                     textView.setTextColor(Color.WHITE);
-                    textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
                 } else {
                     textView.setBackgroundColor(Color.parseColor("#FFF8E1"));
                     textView.setTextColor(Color.BLACK);
-                    textView.setTypeface(textView.getTypeface(), Typeface.NORMAL);
                 }
                 return textView;
             }
@@ -86,69 +81,96 @@ public class RapActivity extends AppCompatActivity {
         listViewKhuvuc.setAdapter(khuVucAdapter);
         listViewRap.setAdapter(rapAdapter);
 
-        loadKhuVucData();
+        // Tải dữ liệu từ Firebase
+        loadFirebaseData();
 
-        listViewKhuvuc.setOnItemClickListener((parent, view, position, id) -> {
+        // Sự kiện chọn khu vực
+        listViewKhuvuc.setOnItemClickListener((adapterView, view, position, id) -> {
             selectedKhuVucIndex = position;
-            updateRapList();
+            String selectedKhuVuc = khuVucList.get(position);
+            rapList.clear();
+            rapList.addAll(khuVucRapMap.getOrDefault(selectedKhuVuc, new ArrayList<>()));
+            rapAdapter.notifyDataSetChanged();
             khuVucAdapter.notifyDataSetChanged();
         });
 
-        listViewRap.setOnItemClickListener((parent, view, position, id) -> {
+        // Sự kiện chọn rạp
+        listViewRap.setOnItemClickListener((adapterView, view, position, id) -> {
             selectedRap = rapList.get(position);
             rapAdapter.notifyDataSetChanged();
         });
 
+        // Nút tiếp tục
         btnTieptuc.setOnClickListener(v -> {
-            if (selectedRap == null) {
-                Toast.makeText(RapActivity.this, "Vui lòng chọn một rạp!", Toast.LENGTH_SHORT).show();
+            if (selectedRap != null) {
+                Toast.makeText(this, "Đã chọn rạp: " + selectedRap, Toast.LENGTH_SHORT).show();
             } else {
-                Intent intent = new Intent(RapActivity.this, ChitietrapphimActivity.class);
-                intent.putExtra("tenRap", selectedRap);
-                startActivity(intent);
+                Toast.makeText(this, "Vui lòng chọn một rạp!", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    private void loadKhuVucData() {
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("khuvuc");
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                khuVucList.clear();
-                khuVucRapMap.clear();
-                for (DataSnapshot khuVucSnapshot : snapshot.getChildren()) {
-                    String khuVucTen = khuVucSnapshot.child("tenkv").getValue(String.class);
-                    if (khuVucTen != null) {
-                        khuVucList.add(khuVucTen);
+    private void loadFirebaseData() {
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
-                        ArrayList<String> rapListTemp = new ArrayList<>();
-                        for (DataSnapshot rapSnapshot : khuVucSnapshot.child("rap").getChildren()) {
-                            rapListTemp.add(rapSnapshot.getValue(String.class));
-                        }
-                        khuVucRapMap.put(khuVucTen, rapListTemp);
-                    }
+        // Lưu trữ danh sách khu vực
+        databaseReference.child("KhuVuc").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot khuVucSnapshot) {
+                khuVucList.clear();
+                for (DataSnapshot khuVuc : khuVucSnapshot.getChildren()) {
+                    String tenKV = khuVuc.child("TenKV").getValue(String.class);
+                    khuVucList.add(tenKV);
                 }
                 khuVucAdapter.notifyDataSetChanged();
-                updateRapList(); // Cập nhật danh sách rạp theo khu vực đầu tiên
+
+                // Mặc định chọn khu vực đầu tiên
+                if (!khuVucList.isEmpty()) {
+                    listViewKhuvuc.performItemClick(null, 0, 0);
+                }
+
+                // Tiếp tục tải danh sách rạp
+                databaseReference.child("Rap").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot rapSnapshot) {
+                        khuVucRapMap.clear();
+                        for (DataSnapshot rap : rapSnapshot.getChildren()) {
+                            String tenRap = rap.child("TenRap").getValue(String.class);
+                            Long idKhuVuc = rap.child("IDKhuVuc").getValue(Long.class);
+
+                            if (idKhuVuc != null) {
+                                String khuVucName = findKhuVucById(khuVucSnapshot, idKhuVuc.intValue());
+                                if (khuVucName != null) {
+                                    if (!khuVucRapMap.containsKey(khuVucName)) {
+                                        khuVucRapMap.put(khuVucName, new ArrayList<>());
+                                    }
+                                    khuVucRapMap.get(khuVucName).add(tenRap);
+                                }
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Toast.makeText(RapActivity.this, "Lỗi khi tải rạp", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(RapActivity.this, "Lỗi tải dữ liệu từ Firebase", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RapActivity.this, "Lỗi khi tải khu vực", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    private void updateRapList() {
-        rapList.clear();
-        if (selectedKhuVucIndex < khuVucList.size()) {
-            String selectedKhuVuc = khuVucList.get(selectedKhuVucIndex);
-            if (khuVucRapMap.containsKey(selectedKhuVuc)) {
-                rapList.addAll(khuVucRapMap.get(selectedKhuVuc));
+    private String findKhuVucById(DataSnapshot khuVucSnapshot, int idKhuVuc) {
+        for (DataSnapshot khuVuc : khuVucSnapshot.getChildren()) {
+            Long id = khuVuc.child("IDKhuVuc").getValue(Long.class);
+            if (id != null && id == idKhuVuc) {
+                return khuVuc.child("TenKV").getValue(String.class);
             }
         }
-        selectedRap = null; // Reset rạp được chọn
-        rapAdapter.notifyDataSetChanged();
+        return null;
     }
 }
