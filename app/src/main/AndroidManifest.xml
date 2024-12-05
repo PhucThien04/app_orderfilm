@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
-        <activity
-            android:name=".RapDetailActivity"
-            android:exported="false" />
         <activity
             android:name=".DangKy"
             android:exported="true">
@@ -39,21 +35,22 @@
         <activity android:name=".DatgheActivity" />
         <activity android:name=".DiachiActivity" />
         <activity android:name=".DoiMatKhau" />
-        <activity android:name=".KhuyenmaiActivity" /> <!-- <activity android:name=".RapActivity" /> -->
+        <activity android:name=".KhuyenmaiActivity" />
+        <activity android:name=".RapActivity" />
         <activity android:name=".ThanhcongActivity" />
         <activity android:name=".ThanhtoanActivity" />
         <activity android:name=".ThongBao" />
         <activity android:name=".ThongTin_CapNhatTaiKhoan" />
         <activity android:name=".ThongTinCongTy" />
         <activity android:name=".XacThucTaiKhoan" />
-        <activity android:name=".Information_Account" /> <!-- <activity android:name="com.example.app_order.DangKy" /> -->
+        <activity android:name=".Information_Account" />
+<!--        <activity android:name="com.example.app_order.DangKy" />-->
         <activity android:name=".QuenMatKhau" />
-        <activity android:name=".TrangChu" />
-        <activity android:name=".TichDiemActivity" />
-        <activity android:name=".HoanvethanhcongActivity" />
-        <activity android:name=".ChitietdatveActivity" />
-        <activity android:name=".LichsudatveActivity" />
-
+        <activity android:name=".TrangChu"/>
+        <activity android:name=".TichDiemActivity"/>
+        <activity android:name=".HoanvethanhcongActivity"/>
+        <activity android:name=".ChitietdatveActivity"/>
+        <activity android:name=".LichsudatveActivity"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

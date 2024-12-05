@@ -28,8 +28,8 @@ public class KhuyenmaiActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.khuyenmai_viewpager);
         btn_back = findViewById(R.id.btnBack);
 
-//        KhuyenmaiViewPagerAdapter viewPagerAdapter = new KhuyenmaiViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-//        viewPager.setAdapter(viewPagerAdapter);
+        KhuyenmaiViewPagerAdapter viewPagerAdapter = new KhuyenmaiViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        viewPager.setAdapter(viewPagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
 
