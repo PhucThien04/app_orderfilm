@@ -2,11 +2,9 @@ package com.example.app_order;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -34,8 +32,9 @@ public class RapActivity extends AppCompatActivity {
     private ArrayAdapter<String> khuVucAdapter, rapAdapter;
     private HashMap<String, ArrayList<String>> khuVucRapMap;
 
-    private int selectedKhuVucIndex = 0; // Mặc định chọn khu vực đầu tiên
+    private int selectedKhuVucIndex = 0;
     private String selectedRap = null;
+    private Rap selectedRapInfo = null; // Biến lưu thông tin của rạp đã chọn
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +49,6 @@ public class RapActivity extends AppCompatActivity {
         rapList = new ArrayList<>();
         khuVucRapMap = new HashMap<>();
 
-        // Tạo adapter
         khuVucAdapter = new ArrayAdapter<String>(this, R.layout.item_rap, R.id.tvItem, khuVucList) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -98,15 +96,17 @@ public class RapActivity extends AppCompatActivity {
         // Sự kiện chọn rạp
         listViewRap.setOnItemClickListener((adapterView, view, position, id) -> {
             selectedRap = rapList.get(position);
+            // Lưu thông tin rạp đã chọn
+            selectedRapInfo = findRapInfoByName(selectedRap);
             rapAdapter.notifyDataSetChanged();
         });
 
         // Nút tiếp tục
         btnTieptuc.setOnClickListener(v -> {
-            if (selectedRap != null) {
+            if (selectedRapInfo != null) {
                 // Nếu đã chọn rạp, chuyển sang RapDetailActivity
                 Intent intent = new Intent(RapActivity.this, RapDetailActivity.class);
-                intent.putExtra("tenRap", selectedRap);  // Truyền tên rạp vào Intent
+                intent.putExtra("selectedRap", selectedRapInfo);  // Truyền đối tượng Rap vào Intent
                 startActivity(intent);
             } else {
                 // Nếu chưa chọn rạp, hiển thị thông báo
@@ -118,7 +118,6 @@ public class RapActivity extends AppCompatActivity {
     private void loadFirebaseData() {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        // Lưu trữ danh sách khu vực
         databaseReference.child("KhuVuc").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot khuVucSnapshot) {
@@ -129,12 +128,10 @@ public class RapActivity extends AppCompatActivity {
                 }
                 khuVucAdapter.notifyDataSetChanged();
 
-                // Mặc định chọn khu vực đầu tiên
                 if (!khuVucList.isEmpty()) {
                     listViewKhuvuc.performItemClick(null, 0, 0);
                 }
 
-                // Tiếp tục tải danh sách rạp
                 databaseReference.child("Rap").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot rapSnapshot) {
@@ -178,4 +175,35 @@ public class RapActivity extends AppCompatActivity {
         }
         return null;
     }
+
+    private Rap findRapInfoByName(String tenRap) {
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference.child("Rap").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot rapSnapshot) {
+                for (DataSnapshot rap : rapSnapshot.getChildren()) {
+                    String rapName = rap.child("TenRap").getValue(String.class);
+                    if (rapName != null && rapName.equals(tenRap)) {
+                        // Tạo đối tượng Rap
+                        selectedRapInfo = new Rap(
+                                tenRap,
+                                rap.child("DiaChiRap").getValue(String.class),
+                                rap.child("NoiDoXe").getValue(String.class),
+                                rap.child("TienIch").getValue(String.class),
+                                rap.child("IDRap").getValue(Integer.class)
+                        );
+                        // Sau khi tìm thấy, cập nhật lại giao diện hoặc chuyển sang activity tiếp theo.
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(RapActivity.this, "Lỗi khi tải thông tin rạp", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return selectedRapInfo;
+    }
+
 }

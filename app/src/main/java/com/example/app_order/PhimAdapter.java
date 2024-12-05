@@ -22,7 +22,7 @@ public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.MovieViewHolde
     @NonNull
     @Override
     public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_movie, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_phimchieu, parent, false);
         return new MovieViewHolder(view);
     }
 
@@ -37,7 +37,7 @@ public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.MovieViewHolde
 
         for (Phongchieu phongchieu : phimchieu.getRooms()) {
             // Inflate layout item_room.xml
-            View roomView = LayoutInflater.from(holder.itemView.getContext()).inflate(R.layout.item_room, holder.gridLayoutRooms, false);
+            View roomView = LayoutInflater.from(holder.itemView.getContext()).inflate(R.layout.item_phongchieu, holder.gridLayoutRooms, false);
 
             // Lấy các TextView trong roomView
             TextView tvRoomName = roomView.findViewById(R.id.tvPhong);
@@ -80,7 +80,7 @@ public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.MovieViewHolde
         void populateRoomButtons(List<Phongchieu> phongchieuList) {
             gridLayoutRooms.removeAllViews(); // Xóa các nút cũ
             for (Phongchieu phongchieu : phongchieuList) {
-                View roomView = LayoutInflater.from(itemView.getContext()).inflate(R.layout.item_room, gridLayoutRooms, false);
+                View roomView = LayoutInflater.from(itemView.getContext()).inflate(R.layout.item_phongchieu, gridLayoutRooms, false);
                 TextView tvRoomName = roomView.findViewById(R.id.tvPhong);
                 TextView tvStartTime = roomView.findViewById(R.id.tvGio);
                 TextView tvAvailableSeats = roomView.findViewById(R.id.tvGhe);

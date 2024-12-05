@@ -42,6 +42,7 @@
 
     <!-- Hàng nút cho 7 ngày trong tuần -->
     <LinearLayout
+        android:id="@+id/llDateButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -84,12 +85,33 @@
             android:text="07" />
     </LinearLayout>
 
-    <!-- Danh sách phim chiếu -->
     <LinearLayout
-        android:id="@+id/llMovieList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_dc" />
+        <TextView
+            android:id="@+id/btnThongtin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:text="Thông tin rạp phim"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
+
+    <!-- RecyclerView để hiển thị danh sách phim -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/revMovieList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
 </LinearLayout>
