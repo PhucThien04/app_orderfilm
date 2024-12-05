@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RapActivity"
+    tools:context=".RapDetailActivity"
     android:orientation="vertical">
 
     <!-- Ô chứa tiêu đề và nút quay lại -->
@@ -40,45 +40,56 @@
             android:layout_centerInParent="true" />
     </RelativeLayout>
 
-    <!-- ListView cho thành phố (vùng) và các rạp tương ứng -->
+    <!-- Hàng nút cho 7 ngày trong tuần -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/header"
-        android:layout_above="@id/btnTieptuc">
+        android:gravity="center">
 
-        <!-- ListView cho vùng -->
-        <ListView
-            android:id="@+id/listViewKhuvuc"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:dividerHeight="1dp" />
+        <Button
+            android:id="@+id/btnDay1"
+            style="@style/DayButtonStyle"
+            android:text="01">
+        </Button>
 
-        <!-- ListView cho các rạp tương ứng -->
-        <ListView
-            android:id="@+id/listViewRap"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFF8E1"
-            android:dividerHeight="1dp" />
+        <Button
+            android:id="@+id/btnDay2"
+            style="@style/DayButtonStyle"
+            android:text="02" />
+
+        <Button
+            android:id="@+id/btnDay3"
+            style="@style/DayButtonStyle"
+            android:text="03" />
+
+        <Button
+            android:id="@+id/btnDay4"
+            style="@style/DayButtonStyle"
+            android:text="04" />
+
+        <Button
+            android:id="@+id/btnDay5"
+            style="@style/DayButtonStyle"
+            android:text="05" />
+
+        <Button
+            android:id="@+id/btnDay6"
+            style="@style/DayButtonStyle"
+            android:text="06" />
+
+        <Button
+            android:id="@+id/btnDay7"
+            style="@style/DayButtonStyle"
+            android:text="07" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnTieptuc"
+    <!-- Danh sách phim chiếu -->
+    <LinearLayout
+        android:id="@+id/llMovieList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:padding="10dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="Tiếp tục"
-        android:textColor="#FFFFFF"
-        android:fontFamily="@font/afacad_bold"
-        android:textSize="28sp"
-        android:layout_alignParentBottom="true"/>
-</RelativeLayout>
+        android:orientation="vertical"
+        android:padding="16dp">
+    </LinearLayout>
+</LinearLayout>
