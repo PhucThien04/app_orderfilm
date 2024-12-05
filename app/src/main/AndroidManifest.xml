@@ -35,6 +35,7 @@
         <activity android:name=".DatgheActivity" />
         <activity android:name=".DiachiActivity" />
         <activity android:name=".DoiMatKhau" />
+        <activity android:name=".DangNhap" />
         <activity android:name=".KhuyenmaiActivity" />
         <activity android:name=".RapActivity" />
         <activity android:name=".ThanhcongActivity" />
