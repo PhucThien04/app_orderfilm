@@ -48,7 +48,7 @@
         android:layout_below="@id/header"
         android:layout_above="@id/btnTieptuc">
 
-        <!-- ListView cho vùng -->
+        <!-- ListView cho khu vực -->
         <ListView
             android:id="@+id/listViewKhuvuc"
             android:layout_width="0dp"

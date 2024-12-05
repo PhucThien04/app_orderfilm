@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,12 +20,22 @@ import java.util.Date;
 public class RapDetailActivity extends AppCompatActivity {
 
     private TextView tvTieude, btnThongtin;
+    private ImageView btnBack;
     private Button btnDay1, btnDay2, btnDay3, btnDay4, btnDay5, btnDay6, btnDay7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rap_detail);
+
+        btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Back = new Intent(RapDetailActivity.this, RapActivity.class);
+                startActivity(Back);
+            }
+        });
 
         tvTieude = findViewById(R.id.tvTieude);
         btnThongtin = findViewById(R.id.btnThongtin);
