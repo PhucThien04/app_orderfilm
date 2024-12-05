@@ -1,6 +1,7 @@
 package com.example.app_order;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -8,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -20,6 +22,8 @@ import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +45,7 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
     private DrawerLayout drawerLayout;
     private ImageView imgMenu;
     private Button btn_book;
+    private TextView txt_Name, txt_Email;
 
 
     private void AnhXa(){
@@ -51,6 +56,8 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         imgMenu = findViewById(R.id.btnMenu);
         drawerLayout = findViewById(R.id.drawer_layout);
 //        btn_book = findViewById(R.id.btn_book);
+        txt_Name = findViewById(R.id.textView_Name);
+        txt_Email = findViewById(R.id.textView_Email);
 
     }
     @Override
@@ -126,6 +133,8 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+
+//        showUserImformation();
 
     }
 
@@ -218,5 +227,15 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         }
     }
 
+//    private void showUserImformation(){
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        if (user != null) {
+//            String name = user.getDisplayName();
+//            String email = user.getEmail();
+//            txt_Name.setText(name);
+//            txt_Email.setText(email);
+//      }
 
-}
+    }
+
+
