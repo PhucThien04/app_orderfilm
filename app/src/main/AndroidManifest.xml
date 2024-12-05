@@ -17,7 +17,7 @@
             android:name=".RapDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".RapActivity"
+            android:name=".DangKy"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
