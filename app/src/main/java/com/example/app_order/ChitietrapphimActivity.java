@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.app_order.activity.RapActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +51,7 @@ public class ChitietrapphimActivity extends AppCompatActivity {
                 startActivity(Dchi);
             }
         });
-        TextView textViewRap = findViewById(R.id.tvTieude);
+        TextView textViewRap = findViewById(R.id.textView_Title);
         String tenRap = getIntent().getStringExtra("tenRap");
 
         if (tenRap != null) {

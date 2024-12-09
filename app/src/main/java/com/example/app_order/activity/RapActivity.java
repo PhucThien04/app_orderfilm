@@ -1,4 +1,4 @@
-package com.example.app_order;
+package com.example.app_order.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,6 +14,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.app_order.R;
+import com.example.app_order.model.Rap;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -39,7 +41,7 @@ public class RapActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rap);
 
         listViewKhuvuc = findViewById(R.id.listViewKhuvuc);
         listViewRap = findViewById(R.id.listViewRap);

@@ -3,8 +3,9 @@ package com.example.app_order;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.app_order.activity.RapActivity;
 
 public class DetailMovie_MaDa extends AppCompatActivity {
     @Override

@@ -1,4 +1,4 @@
-package com.example.app_order;
+package com.example.app_order.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.example.app_order.R;
+import com.example.app_order.model.Rap;
+
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -56,12 +57,10 @@ public class RapDetailActivity extends AppCompatActivity {
         }
 
         btnThongtin.setOnClickListener(v -> {
-            // Truyền đối tượng Rap vào Intent
-            Rap infoRap = (Rap) getIntent().getSerializableExtra("selectedRap");
 
-            if (infoRap != null) {
+            if (selectedRap != null) {
                 Intent intent = new Intent(RapDetailActivity.this, RapInfoActivity.class);
-                intent.putExtra("selectedRap", infoRap); // Truyền đối tượng Rap
+                intent.putExtra("infoRap", selectedRap); // Truyền đối tượng Rap
                 startActivity(intent);
             } else {
                 Toast.makeText(RapDetailActivity.this, "Thông tin rạp không hợp lệ", Toast.LENGTH_SHORT).show();

@@ -1,10 +1,14 @@
-package com.example.app_order;
+package com.example.app_order.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+
+import com.example.app_order.fragment.KmDoitacFragment;
+import com.example.app_order.fragment.KmPhimFragment;
+import com.example.app_order.fragment.KmRapFragment;
 
 public class KhuyenmaiViewPagerAdapter extends FragmentStatePagerAdapter {
 

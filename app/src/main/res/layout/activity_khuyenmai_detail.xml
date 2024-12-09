@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".KhuyenmaiDetailActivity">
+    tools:context=".activity.KhuyenmaiDetailActivity">
 
     <!-- Ô chứa tiêu đề và nút quay lại -->
     <RelativeLayout

@@ -22,7 +22,7 @@ public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.MovieViewHolde
     @NonNull
     @Override
     public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_phimchieu, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_phim, parent, false);
         return new MovieViewHolder(view);
     }
 
@@ -74,7 +74,6 @@ public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.MovieViewHolde
             super(itemView);
             tvMovieTitle = itemView.findViewById(R.id.tvTenphim);
             tvMovieType = itemView.findViewById(R.id.tvLoaiphim);
-            gridLayoutRooms = itemView.findViewById(R.id.gridPhong);
         }
 
         void populateRoomButtons(List<Phongchieu> phongchieuList) {

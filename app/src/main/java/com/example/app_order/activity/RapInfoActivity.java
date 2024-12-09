@@ -1,4 +1,4 @@
-package com.example.app_order;
+package com.example.app_order.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.app_order.R;
+import com.example.app_order.model.Rap;
 
 public class RapInfoActivity extends AppCompatActivity {
 
@@ -32,14 +35,25 @@ public class RapInfoActivity extends AppCompatActivity {
         tvTienIch = findViewById(R.id.tvTienIch);
 
         // Nhận đối tượng Rap từ Intent
-        Rap infoRap = (Rap) getIntent().getSerializableExtra("selectedRap");
+        Rap infoRap = (Rap) getIntent().getSerializableExtra("infoRap");
 
         if (infoRap != null) {
-            // Hiển thị thông tin rạp
-            tvTieude.setText(infoRap.getTenRap());
-            tvDiaChi.setText("Địa chỉ: " + infoRap.getDiaChi());
-            tvNoiDoXe.setText("Nơi đỗ xe: " + infoRap.getNoiDoXe());
-            tvTienIch.setText("Tiện ích: " + infoRap.getTienIch());
+            String Tieude = infoRap.getTenRap();
+            String DiaChi = infoRap.getDiaChi();
+            String NoiDoXe = infoRap.getNoiDoXe();
+            String TienIch = infoRap.getTienIch();
+
+            if (NoiDoXe != null) {
+                NoiDoXe = NoiDoXe.replace("\\n", "\n");
+            }
+
+            if (TienIch != null) {
+                TienIch = TienIch.replace("\\n", "\n");
+            }
+            tvTieude.setText(Tieude);
+            tvDiaChi.setText(DiaChi);
+            tvNoiDoXe.setText(NoiDoXe);
+            tvTienIch.setText(TienIch);
         }
     }
 }

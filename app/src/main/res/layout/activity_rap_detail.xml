@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RapDetailActivity"
+    tools:context=".activity.RapDetailActivity"
     android:orientation="vertical">
 
     <!-- Ô chứa tiêu đề và nút quay lại -->
@@ -109,7 +109,7 @@
 
     <!-- RecyclerView để hiển thị danh sách phim -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/revMovieList"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />

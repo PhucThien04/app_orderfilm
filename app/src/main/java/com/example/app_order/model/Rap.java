@@ -1,4 +1,4 @@
-package com.example.app_order;
+package com.example.app_order.model;
 
 import java.io.Serializable;
 

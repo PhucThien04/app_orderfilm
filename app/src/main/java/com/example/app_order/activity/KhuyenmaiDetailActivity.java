@@ -1,4 +1,4 @@
-package com.example.app_order;
+package com.example.app_order.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.app_order.R;
 
 public class KhuyenmaiDetailActivity extends AppCompatActivity {
 
@@ -42,4 +44,6 @@ public class KhuyenmaiDetailActivity extends AppCompatActivity {
         tvTitle.setText(tieude);
         tvDescription.setText(mota);
     }
+
+
 }
