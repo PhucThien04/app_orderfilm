@@ -15,13 +15,13 @@
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
         <activity
-            android:name=".activity.RapInfoActivity"
+            android:name=".activity.KhuyenmaiDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.KhuyenmaiActivity"
             android:exported="false" />
         <activity
             android:name=".activity.RapDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.RapActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,7 +43,7 @@
         <activity android:name=".DatgheActivity" />
         <activity android:name=".DiachiActivity" />
         <activity android:name=".DoiMatKhau" />
-        <activity android:name=".activity.KhuyenmaiActivity" /> <!-- <activity android:name=".RapActivity" /> -->
+<!--        <activity android:name=".activity.KhuyenmaiActivity" /> &lt;!&ndash; <activity android:name=".RapActivity" /> &ndash;&gt;-->
         <activity android:name=".ThanhcongActivity" />
         <activity android:name=".ThanhtoanActivity" />
         <activity android:name=".ThongBao" />
@@ -57,6 +57,8 @@
         <activity android:name=".HoanvethanhcongActivity" />
         <activity android:name=".ChitietdatveActivity" />
         <activity android:name=".LichsudatveActivity" />
+        <activity android:name=".activity.RapActivity" />
+
 
         <meta-data
             android:name="preloaded_fonts"

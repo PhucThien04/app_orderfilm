@@ -19,7 +19,19 @@
         <item
             android:id="@+id/btn_cinema"
             android:icon="@drawable/film_making"
-            android:title="Rạp" />
+            android:title="Rạp"/>
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Thành viên nhóm 13"/>
+        <item
+            android:title="Đỗ Thị Quỳnh Nhung" />
+        <item
+            android:title="Khương Ngân Huyền" />
+        <item
+            android:title="Nguyễn Phúc Thiên" />
     </group>
 
 </menu>
