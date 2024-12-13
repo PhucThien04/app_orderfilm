@@ -1,14 +1,25 @@
-package Model;
+package com.example.app_order.model;
 
 public class KhachHang {
-    private String fullName, dateOfBirth, phoneNumber, email, matKhau;
+    private String idCustomer, fullName, dateOfBirth, phoneNumber, email, matKhau;
 
-    public KhachHang(String fullName, String dateOfBirth, String phoneNumber, String email, String matKhau) {
+    public KhachHang(){
+
+    }
+    public KhachHang(String idCustomer, String fullName, String dateOfBirth, String phoneNumber, String email, String matKhau) {
+        this.idCustomer = idCustomer;
         this.fullName = fullName;
         this.dateOfBirth = dateOfBirth;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.matKhau = matKhau;
+    }
+    public String getIdCustomer() {
+        return idCustomer;
+    }
+
+    public void setIdCustomer(String idCustomer) {
+        this.idCustomer = idCustomer;
     }
 
     public String getFullName() {

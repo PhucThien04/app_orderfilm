@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
-import Model.KhachHang;
+import com.example.app_order.model.KhachHang;
 
 public class DangKy extends AppCompatActivity {
     private EditText verifyPass, edit_dateOfBird, edit_fullName, edit_phoneNumber, edit_email, edit_pass, edit_verifyPass;
@@ -29,7 +29,7 @@ public class DangKy extends AppCompatActivity {
     boolean passVisible;
     private FirebaseAuth auth;
 
-    private void AnhXa(){
+    private void AnhXa() {
         verifyPass = findViewById(R.id.editText_verifyPass);
         edit_dateOfBird = findViewById(R.id.editText_dateOfBirth);
         edit_fullName = findViewById(R.id.editText_fullName);
@@ -65,7 +65,6 @@ public class DangKy extends AppCompatActivity {
             picker.show();
         });
 
-
         btn_forgotPass.setOnClickListener(v -> {
             Intent intent = new Intent(DangKy.this, QuenMatKhau.class);
             startActivity(intent);
@@ -78,7 +77,7 @@ public class DangKy extends AppCompatActivity {
 
         btn_signUp.setOnClickListener(v -> {
             if (TextUtils.isEmpty(edit_fullName.getText().toString()) || TextUtils.isEmpty(edit_email.getText().toString()) || TextUtils.isEmpty(edit_phoneNumber.getText().toString())
-            || TextUtils.isEmpty(edit_dateOfBird.getText().toString()) || TextUtils.isEmpty(edit_pass.getText().toString()) ||TextUtils.isEmpty(edit_verifyPass.getText().toString())){
+                    || TextUtils.isEmpty(edit_dateOfBird.getText().toString()) || TextUtils.isEmpty(edit_pass.getText().toString()) || TextUtils.isEmpty(edit_verifyPass.getText().toString())) {
                 Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
             } else if (!edit_pass.getText().toString().equals(edit_verifyPass.getText().toString())) {
                 Toast.makeText(this, "Mật khẩu không khớp!", Toast.LENGTH_SHORT).show();
@@ -86,59 +85,51 @@ public class DangKy extends AppCompatActivity {
                 SignUp();
             }
 
-
         });
 
-        edit_pass.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                final int Right = 2;
-                if(motionEvent.getAction()==MotionEvent.ACTION_UP){
-                    if(motionEvent.getRawX()>=edit_pass.getRight()-edit_pass.getCompoundDrawables()[Right].getBounds().width()){
-                        int select = edit_pass.getSelectionEnd();
-                        if(passVisible){
-                            edit_pass.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.hide, 0);
-                            edit_pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                            passVisible = false;
-                        }else {
-                            edit_pass.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.view, 0);
-                            edit_pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                            passVisible = true;
-                        }
-                        edit_pass.setSelection(select);
-                        return true;
+        edit_pass.setOnTouchListener((view, motionEvent) -> {
+            final int Right = 2;
+            if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                if (motionEvent.getRawX() >= edit_pass.getRight() - edit_pass.getCompoundDrawables()[Right].getBounds().width()) {
+                    int select = edit_pass.getSelectionEnd();
+                    if (passVisible) {
+                        edit_pass.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.hide, 0);
+                        edit_pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                        passVisible = false;
+                    } else {
+                        edit_pass.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.view, 0);
+                        edit_pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                        passVisible = true;
                     }
+                    edit_pass.setSelection(select);
+                    return true;
                 }
-                return false;
             }
-
+            return false;
         });
 
-        verifyPass.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                final int Right = 2;
-                if(motionEvent.getAction()==MotionEvent.ACTION_UP){
-                    if(motionEvent.getRawX()>=verifyPass.getRight()-verifyPass.getCompoundDrawables()[Right].getBounds().width()){
-                        int select = verifyPass.getSelectionEnd();
-                        if(passVisible){
-                            verifyPass.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.hide, 0);
-                            verifyPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                            passVisible = false;
-                        }else {
-                            verifyPass.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.view, 0);
-                            verifyPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                            passVisible = true;
-                        }
-                        verifyPass.setSelection(select);
-                        return true;
+        verifyPass.setOnTouchListener((view, motionEvent) -> {
+            final int Right = 2;
+            if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                if (motionEvent.getRawX() >= verifyPass.getRight() - verifyPass.getCompoundDrawables()[Right].getBounds().width()) {
+                    int select = verifyPass.getSelectionEnd();
+                    if (passVisible) {
+                        verifyPass.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.hide, 0);
+                        verifyPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                        passVisible = false;
+                    } else {
+                        verifyPass.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.view, 0);
+                        verifyPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                        passVisible = true;
                     }
+                    verifyPass.setSelection(select);
+                    return true;
                 }
-                return false;
             }
-
+            return false;
         });
     }
+
     private void SignUp() {
         String email = edit_email.getText().toString().trim();
         String pass = edit_pass.getText().toString().trim();
@@ -153,7 +144,7 @@ public class DangKy extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         String userId = auth.getCurrentUser().getUid();
 
-                        KhachHang user = new KhachHang(fullName, dateOfBirth, phoneNumber, email, pass);
+                        KhachHang user = new KhachHang(userId, fullName, dateOfBirth, phoneNumber, email, pass);
 
                         FirebaseDatabase database = FirebaseDatabase.getInstance();
                         DatabaseReference usersRef = database.getReference("KhachHang");
@@ -176,5 +167,4 @@ public class DangKy extends AppCompatActivity {
                     }
                 });
     }
-
 }

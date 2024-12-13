@@ -10,18 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.app_order.DatgheActivity;
-import com.example.app_order.model.Phimchieu;
-import com.example.app_order.model.PhongChieu;
+import com.example.app_order.model.Phim;
 import com.example.app_order.R;
+import com.example.app_order.model.PhongChieu;
 
 import java.util.List;
 
 public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.MovieViewHolder> {
-    private List<Phimchieu> phimchieuList;
+    private List<Phim> phimList;
 
-    public PhimAdapter(List<Phimchieu> phimchieuList) {
-        this.phimchieuList = phimchieuList;
+    public PhimAdapter(List<Phim> phimList) {
+        this.phimList = phimList;
     }
 
     @NonNull
@@ -33,53 +32,53 @@ public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.MovieViewHolde
 
     @Override
     public void onBindViewHolder(@NonNull PhimAdapter.MovieViewHolder holder, int position) {
-        Phimchieu phimchieu = phimchieuList.get(position);
-        holder.tvMovieAge.setText(String.valueOf(phimchieu.getDoTuoi()));
-        holder.tvMovieTitle.setText(phimchieu.getTenPhim());
+        Phim phim = phimList.get(position);
+        holder.tvMovieAge.setText(String.valueOf(phim.getDoTuoi()));
+        holder.tvMovieTitle.setText(phim.getTenPhim());
 
-        // Thêm các phòng chiếu vào GridLayout
-        GridLayout gridLayout = holder.gridLayoutRooms;
-        if (gridLayout != null) {
-            gridLayout.removeAllViews(); // Đảm bảo rằng GridLayout không null trước khi xóa các views cũ
-        }
 
-        for (PhongChieu phongchieu : phimchieu.getRooms()) {
-            // Inflate layout item_room.xml
-            View roomView = LayoutInflater.from(holder.itemView.getContext()).inflate(R.layout.item_phongchieu, holder.gridLayoutRooms, false);
+//        GridLayout gridLayout = holder.gridLayoutRooms;
+//        if (gridLayout != null) {
+//            gridLayout.removeAllViews();
+//        }
 
-            // Lấy các TextView trong roomView
-            TextView tvRoomName = roomView.findViewById(R.id.tvPhong);
-            TextView tvStartTime = roomView.findViewById(R.id.tvGio);
-
-            // Cập nhật dữ liệu cho các TextView
-            tvRoomName.setText(phongchieu.getTenPC());
-            tvStartTime.setText(phongchieu.getGioChieu());
-
-            // Chuyển trang
-            roomView.setOnClickListener(v -> {
-                Intent intent = new Intent(holder.itemView.getContext(), DatgheActivity.class);
-                holder.itemView.getContext().startActivity(intent);
-            });
-
-            // Thêm roomView vào GridLayout
-            gridLayout.addView(roomView);
-        }
+//        for (PhongChieu phongchieu : phim.getRooms()) {
+//            // Inflate layout item_room.xml
+//            View roomView = LayoutInflater.from(holder.itemView.getContext()).inflate(R.layout.item_phongchieu, holder.gridLayoutRooms, false);
+//
+//            // Lấy các TextView trong roomView
+//            TextView tvRoomName = roomView.findViewById(R.id.tvPhong);
+//            TextView tvStartTime = roomView.findViewById(R.id.tvGio);
+//
+//            // Cập nhật dữ liệu cho các TextView
+//            tvRoomName.setText(phongchieu.getTenPC());
+//            tvStartTime.setText(phongchieu.getGioChieu());
+//
+//            // Chuyển trang
+//            roomView.setOnClickListener(v -> {
+//                Intent intent = new Intent(holder.itemView.getContext(), DatgheActivity.class);
+//                holder.itemView.getContext().startActivity(intent);
+//            });
+//
+//            // Thêm roomView vào GridLayout
+//            gridLayout.addView(roomView);
+//        }
     }
 
     @Override
     public int getItemCount() {
-        return phimchieuList.size();
+        return phimList.size();
     }
 
     class MovieViewHolder extends RecyclerView.ViewHolder {
         TextView tvMovieAge, tvMovieTitle;
-        GridLayout gridLayoutRooms;
+//        GridLayout gridLayoutRooms;
 
         MovieViewHolder(@NonNull View itemView) {
             super(itemView);
             tvMovieAge = itemView.findViewById(R.id.doTuoi);
             tvMovieTitle = itemView.findViewById(R.id.tenPhim);
-            gridLayoutRooms = itemView.findViewById(R.id.gridPhongChieu); // Khởi tạo gridLayoutRooms ở đây
+//            gridLayoutRooms = itemView.findViewById(R.id.gridPhongChieu); // Khởi tạo gridLayoutRooms ở đây
         }
     }
 }

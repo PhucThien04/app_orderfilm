@@ -1,23 +1,41 @@
 package com.example.app_order.model;
 
 public class PhongChieu {
-    private String TenPC;
-    private String gioChieu;
+    private String maPhong;
+    private int soPhong;
+    private String maRap;
 
     public PhongChieu() {
     }
 
-    public PhongChieu(String TenPC, String gioChieu) {
-        this.TenPC = TenPC;
-        this.gioChieu = gioChieu;
+    public PhongChieu(String maPhong, int soPhong, String maRap) {
+        this.maPhong = maPhong;
+        this.soPhong = soPhong;
+        this.maRap = maRap;
     }
 
-    public String getTenPC() {
-        return TenPC;
+    public String getMaPhong() {
+        return maPhong;
     }
 
-    public String getGioChieu() {
-        return gioChieu;
+    public void setMaPhong(String maPhong) {
+        this.maPhong = maPhong;
+    }
+
+    public int getSoPhong() {
+        return soPhong;
+    }
+
+    public void setSoPhong(int soPhong) {
+        this.soPhong = soPhong;
+    }
+
+    public String getMaRap() {
+        return maRap;
+    }
+
+    public void setMaRap(String maRap) {
+        this.maRap = maRap;
     }
 }
 
