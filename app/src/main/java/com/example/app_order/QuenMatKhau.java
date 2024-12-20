@@ -53,9 +53,11 @@ public class QuenMatKhau extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if (snapshot.exists()) {
+                        String oldPassword = snapshot.getChildren().iterator().next().child("matKhau").getValue(String.class);
                         // Email found, navigate to password change screen
                         Intent intent = new Intent(QuenMatKhau.this, DoiMatKhau.class);
                         intent.putExtra("EMAIL", email);
+                        intent.putExtra("OLD_PASSWORD", oldPassword);
                         startActivity(intent);
                     } else {
                         // Email not found in the database

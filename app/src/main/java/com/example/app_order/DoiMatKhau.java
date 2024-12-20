@@ -26,7 +26,7 @@ public class DoiMatKhau extends AppCompatActivity {
     private Button btn_changePass;
     private ImageView btnBack;
     private DatabaseReference databaseReference;
-    private String userEmail;
+    private String userEmail, oldPassword;
     private boolean passVisible = false;
 
     @Override
@@ -39,6 +39,7 @@ public class DoiMatKhau extends AppCompatActivity {
 
         // Get email from previous activity
         userEmail = getIntent().getStringExtra("EMAIL");
+        oldPassword = getIntent().getStringExtra("OLD_PASSWORD");
 
         // Initialize views
         edit_oldPass = findViewById(R.id.editText_OldPass);
@@ -72,6 +73,10 @@ public class DoiMatKhau extends AppCompatActivity {
 
         if (!newPass.equals(confirmPass)) {
             Toast.makeText(this, "Mật khẩu mới không khớp", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (oldPass.equals(newPass)) {
+            Toast.makeText(this, "Mật khẩu mới phải khác mật khẩu cũ", Toast.LENGTH_SHORT).show();
             return;
         }
 
