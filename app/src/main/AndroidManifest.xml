@@ -13,7 +13,7 @@
         android:theme="@style/Theme.App_order"
         tools:targetApi="31">
         <activity
-            android:name=".activity.RapDetailActivity"
+            android:name=".DangNhap"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.RapDetailActivity"/>
+        <activity android:name=".activity.RapInfoActivity"/>
         <activity android:name=".BookingHistoryActivity" />
         <activity android:name=".DetailMovie_Modomdom" />
         <activity android:name=".DetailMovie_Cam" />
@@ -32,14 +34,14 @@
         <activity android:name=".TransactionsActivity" />
 <!--        <activity android:name=".ChitietrapphimActivity" />-->
         <activity android:name=".Cinema_Lineup" />
-<!--        <activity android:name=".DatgheActivity" />-->
+        <activity android:name=".DatgheActivity" />
 <!--        <activity android:name=".DiachiActivity" />-->
         <activity android:name=".DoiMatKhau" />
-        <activity android:name=".DangNhap" />
+<!--        <activity android:name=".DangNhap" />-->
         <activity android:name=".activity.KhuyenmaiActivity" />
         <activity android:name=".activity.RapActivity" />
         <activity android:name=".ThanhcongActivity" />
-<!--        <activity android:name=".ThanhtoanActivity" />-->
+        <activity android:name=".ThanhtoanActivity" />
         <activity android:name=".ThongBao" />
         <activity android:name=".ThongTin_CapNhatTaiKhoan" />
         <activity android:name=".ThongTinCongTy" />
@@ -47,11 +49,12 @@
         <activity android:name=".Information_Account" />
 <!--        <activity android:name="com.example.app_order.DangKy" />-->
         <activity android:name=".QuenMatKhau" />
-<!--        <activity android:name=".TrangChu"/>-->
+        <activity android:name=".TrangChu"/>
         <activity android:name=".TichDiemActivity"/>
         <activity android:name=".HoanvethanhcongActivity"/>
         <activity android:name=".ChitietdatveActivity"/>
         <activity android:name=".LichsudatveActivity"/>
+        <activity android:name=".DangKy"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.app_order.R;
+import com.example.app_order.TrangChu;
 import com.example.app_order.model.Rap;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,6 +31,7 @@ public class RapActivity extends AppCompatActivity {
 
     private ListView listViewKhuvuc, listViewRap;
     private Button btnTieptuc;
+    private ImageView btnBack;
 
     private ArrayList<String> khuVucList, rapList;
     private ArrayAdapter<String> khuVucAdapter, rapAdapter;
@@ -46,6 +49,7 @@ public class RapActivity extends AppCompatActivity {
         listViewKhuvuc = findViewById(R.id.listViewKhuvuc);
         listViewRap = findViewById(R.id.listViewRap);
         btnTieptuc = findViewById(R.id.btnTieptuc);
+        btnBack = findViewById(R.id.btnBack);
 
         khuVucList = new ArrayList<>();
         rapList = new ArrayList<>();
@@ -63,7 +67,13 @@ public class RapActivity extends AppCompatActivity {
                 return textView;
             }
         };
-
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RapActivity.this, TrangChu.class);
+                startActivity(intent);
+            }
+        });
         rapAdapter = new ArrayAdapter<String>(this, R.layout.item_rap, R.id.tvItem, rapList) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -114,7 +124,9 @@ public class RapActivity extends AppCompatActivity {
                 // Nếu chưa chọn rạp, hiển thị thông báo
                 Toast.makeText(this, "Vui lòng chọn một rạp phim!", Toast.LENGTH_SHORT).show();
             }
-        });
+        }
+
+        );
     }
 
     private void loadFirebaseData() {

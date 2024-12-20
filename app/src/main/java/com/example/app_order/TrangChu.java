@@ -184,7 +184,7 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         List<Photo> list = new ArrayList<>();
         list.add(new Photo(R.drawable.thobaymau));
         list.add(new Photo(R.drawable.ly));
-        list.add(new Photo(R.drawable.khuyenmai));
+        list.add(new Photo(R.drawable.img_dc));
 
         return list;
         }

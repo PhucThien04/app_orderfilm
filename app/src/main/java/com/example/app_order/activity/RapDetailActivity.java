@@ -142,16 +142,14 @@ public class RapDetailActivity extends AppCompatActivity {
         List<Phimchieu> phimchieuList = new ArrayList<>();
 
         List<PhongChieu> rooms1 = new ArrayList<>();
-        rooms1.add(new PhongChieu("Screen 2", "10:00"));
-        rooms1.add(new PhongChieu("Screen 3", "12:00"));
-        rooms1.add(new PhongChieu("Screen 4", "14:00"));
-        rooms1.add(new PhongChieu("Screen 5", "13:00"));
-        phimchieuList.add(new Phimchieu(18, "CÁM", rooms1));
+        rooms1.add(new PhongChieu("Screen 01", "10:00"));
+        rooms1.add(new PhongChieu("Screen 02", "18:00"));
+        rooms1.add(new PhongChieu("Screen 03", "20:00"));
+        phimchieuList.add(new Phimchieu(18, "Cám", rooms1));
 
         List<PhongChieu> rooms2 = new ArrayList<>();
-        rooms2.add(new PhongChieu("Screen 2", "11:00"));
-        rooms2.add(new PhongChieu("Screen 3", "13:00"));
-        phimchieuList.add(new Phimchieu(16, "ĐỐ ANH CÒNG ĐƯỢC TÔI", rooms2));
+        rooms2.add(new PhongChieu("Screen 04", "15:00"));
+        phimchieuList.add(new Phimchieu(14, "Gia đình hoàn hảo", rooms2));
 
         return phimchieuList;
     }
