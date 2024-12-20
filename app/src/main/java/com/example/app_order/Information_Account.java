@@ -46,6 +46,9 @@ public class Information_Account  extends AppCompatActivity {
             showDeleteAccountDialog();
         });
 
+        findViewById(R.id.btnLogout).setOnClickListener(v -> {
+            startActivity(new Intent(Information_Account.this, DangNhap.class));
+        });
         btnback = findViewById(R.id.btnBack);
 
         btnback.setOnClickListener(v -> {

@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="30/09/2024 (Thứ hai) 18:00\nGhế tiêu chuẩn: X vé (XXX.000 VNĐ/vé)\nGhế VIP: X vé (XXX.000 VNĐ/vé)\nRạp: Cantavil (TPHCM)"
+                android:text="22/12/2024 (Thứ bảy) 18:00\nGhế tiêu chuẩn: 1 vé (100.000 VNĐ/vé)\nRạp: Cantavil (TPHCM)"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:fontFamily="@font/afacad"/>
@@ -145,7 +145,7 @@
             android:textColor="#000000"
             android:fontFamily="@font/afacad"
             android:textSize="20sp"
-            android:text="2448635333465378\nCÁM\nCantavil (TPHCM)\nScreen 06\n30/09/2024 18:00\nXXX000 VNĐ"
+            android:text="2448635333465378\nCÁM\nCantavil (TPHCM)\nScreen 06\n30/09/2024 18:00\n100000 VNĐ"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
             android:gravity="end" />
