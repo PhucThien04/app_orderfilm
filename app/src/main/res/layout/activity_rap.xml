@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RapphimActivity"
+    tools:context=".activity.RapActivity"
     android:orientation="vertical">
 
     <!-- Ô chứa tiêu đề và nút quay lại -->
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/afacad_bold"
             android:gravity="center"
-            android:text="MUA VÉ"
+            android:text="RẠP PHIM"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:layout_centerInParent="true" />
@@ -48,9 +48,9 @@
         android:layout_below="@id/header"
         android:layout_above="@id/btnTieptuc">
 
-        <!-- ListView cho vùng -->
+        <!-- ListView cho khu vực -->
         <ListView
-            android:id="@+id/lvVung"
+            android:id="@+id/listViewKhuvuc"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -59,12 +59,12 @@
 
         <!-- ListView cho các rạp tương ứng -->
         <ListView
-            android:id="@+id/lvRap"
+            android:id="@+id/listViewRap"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:dividerHeight="1dp"
-            android:background="#FFF8E1" />
+            android:background="#FFF8E1"
+            android:dividerHeight="1dp" />
     </LinearLayout>
 
     <Button

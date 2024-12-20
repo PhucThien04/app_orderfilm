@@ -3,8 +3,9 @@ package com.example.app_order;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.app_order.activity.RapActivity;
 
 public class DetailMovie_MaDa extends AppCompatActivity {
     @Override
@@ -18,7 +19,7 @@ public class DetailMovie_MaDa extends AppCompatActivity {
         });
 
         findViewById(R.id.btnBookTicket).setOnClickListener(v -> {
-            Intent intent = new Intent(DetailMovie_MaDa.this, RapphimActivity.class);
+            Intent intent = new Intent(DetailMovie_MaDa.this, RapActivity.class);
             startActivity(intent);
         });
     }

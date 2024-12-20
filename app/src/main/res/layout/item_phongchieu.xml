@@ -7,7 +7,7 @@
     android:layout_margin="10dp"
     android:background="@drawable/rounded_room">
 
-        <TextView
+    <TextView
         android:id="@+id/tvPhong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,22 +15,23 @@
         android:fontFamily="@font/afacad_bold"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="11dp"
         android:layout_gravity="center"/>
 
-        <TextView
+    <TextView
         android:id="@+id/tvGio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Giờ"
-        android:textSize="15sp"
+        android:text="Thời gian"
+        android:textSize="13sp"
         android:textColor="#F20606" />
 
-        <TextView
+    <TextView
         android:id="@+id/tvGhe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ghế"
-        android:textSize="15sp"
+        android:text="Ghế: 10"
+        android:textSize="13sp"
         android:textColor="#FFFFFF"/>
-    </LinearLayout>
+
+</LinearLayout>

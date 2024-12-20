@@ -1,70 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".KmPhimFragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.KmPhimFragment"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/btnKMphim1"
+    <ListView
+        android:id="@+id/listViewPhim"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="#FFFCF0"
-        android:orientation="vertical">
-
-        <!--        <ImageView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="160dp"-->
-        <!--            android:src=""/>-->
-        <TextView
-            android:id="@+id/tvKMphim1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/afacad_bold"
-            android:textSize="25sp"
-            android:layout_margin="5dp"
-            android:text="RA MẮT LY NƯỚC LOTTE CINEMA X THỎ BẢY MÀU" />
-
-        <TextView
-            android:id="@+id/tvKMphimtg1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="01/10/2024 - 03/01/2025" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/btnKMphim2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="#FFFCF0"
-        android:orientation="vertical">
-
-        <!--        <ImageView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="160dp"-->
-        <!--            android:src=""/>-->
-        <TextView
-            android:id="@+id/tvKMphim2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/afacad_bold"
-            android:textSize="25sp"
-            android:layout_margin="5dp"
-            android:text="LY PHIM MỚI PHIÊN BẢN TRANSFORMER MỘT" />
-
-        <TextView
-            android:id="@+id/tvKMphimtg2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="13/09/2024 - 31/12/2024" />
-
-    </LinearLayout>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

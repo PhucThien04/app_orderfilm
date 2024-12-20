@@ -6,7 +6,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -18,6 +20,8 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.app_order.activity.KhuyenmaiActivity;
+import com.example.app_order.activity.RapActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -39,6 +43,8 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ImageView imgMenu;
+    private Button btn_book;
+    private TextView txt_Name, txt_Email;
 
 
     private void AnhXa(){
@@ -48,6 +54,9 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         navigationView = findViewById(R.id.nav_view);
         imgMenu = findViewById(R.id.btnMenu);
         drawerLayout = findViewById(R.id.drawer_layout);
+//        btn_book = findViewById(R.id.btn_book);
+        txt_Name = findViewById(R.id.textView_Name);
+        txt_Email = findViewById(R.id.textView_Email);
 
     }
     @Override
@@ -55,6 +64,8 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_trang_chu);
+
+        AnhXa();
 
         findViewById(R.id.btnFilms).setOnClickListener(v -> {
             Intent intent = new Intent(TrangChu.this, Cinema_Lineup.class);
@@ -67,7 +78,7 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         });
 
         findViewById(R.id.btnCinema).setOnClickListener(v -> {
-            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+            Intent intent = new Intent(TrangChu.this, RapActivity.class);
             startActivity(intent);
         });
 
@@ -75,8 +86,11 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
             Intent intent = new Intent(TrangChu.this, Information_Account.class);
             startActivity(intent);
         });
+//        btn_book.setOnClickListener(v -> {
+//            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+//            startActivity(intent);
+//        });
 
-        AnhXa();
 
         mListPhoto = getListPhoto();
 
@@ -119,13 +133,15 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
             }
         });
 
+//        showUserImformation();
+
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.btn_buyticket){
-            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+            Intent intent = new Intent(TrangChu.this, RapActivity.class);
             startActivity(intent);
             return true;
         }
@@ -140,7 +156,7 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
             return true;
         }
         if(id == R.id.btn_cinema){
-            Intent intent = new Intent(TrangChu.this, RapphimActivity.class);
+            Intent intent = new Intent(TrangChu.this, RapActivity.class);
             startActivity(intent);
             return true;
         }
@@ -168,7 +184,7 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         List<Photo> list = new ArrayList<>();
         list.add(new Photo(R.drawable.thobaymau));
         list.add(new Photo(R.drawable.ly));
-        list.add(new Photo(R.drawable.khuyenmai));
+        list.add(new Photo(R.drawable.img_dc));
 
         return list;
         }
@@ -210,5 +226,15 @@ public class TrangChu extends AppCompatActivity implements NavigationView.OnNavi
         }
     }
 
+//    private void showUserImformation(){
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        if (user != null) {
+//            String name = user.getDisplayName();
+//            String email = user.getEmail();
+//            txt_Name.setText(name);
+//            txt_Email.setText(email);
+//      }
 
-}
+    }
+
+

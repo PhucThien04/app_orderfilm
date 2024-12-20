@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.app_order.activity.RapActivity;
+
 public class Now_Showing extends Fragment {
     private ViewPager2 viewPager;
     private int[] images = {R.drawable.cam, R.drawable.doanhcongduoctoi, R.drawable.caubecaheo, R.drawable.hanhtrinhsolo, R.drawable.lookback};
@@ -27,13 +29,21 @@ public class Now_Showing extends Fragment {
         // Tự động chuyển ảnh nếu cần (không bắt buộc)
         autoSlideImages();
 
-        view.findViewById(R.id.btnBuyTicket_1).setOnClickListener(v -> {
+        view.findViewById(R.id.imgMovie_1).setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), DetailMovie_Cam.class);
             startActivity(intent);
         });
 
-        view.findViewById(R.id.btnBuyTicket_2).setOnClickListener(v -> {
+        view.findViewById(R.id.imgMovie_2).setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), DetailMovie_DoAnhCongDuocToi.class);
+            startActivity(intent);
+        });
+        view.findViewById(R.id.btnBuyTicket_1).setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), RapActivity.class);
+            startActivity(intent);
+        });
+        view.findViewById(R.id.btnBuyTicket_2).setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), RapActivity.class);
             startActivity(intent);
         });
         return view;

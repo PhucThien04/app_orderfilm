@@ -1,4 +1,4 @@
-package com.example.app_order;
+package com.example.app_order.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.app_order.R;
+import com.example.app_order.TrangChu;
+import com.example.app_order.adapter.KhuyenmaiViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 public class KhuyenmaiActivity extends AppCompatActivity {

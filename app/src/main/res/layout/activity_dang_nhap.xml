@@ -44,10 +44,11 @@
             android:textSize="32sp"
             android:layout_gravity="center"/>
         <EditText
+            android:id="@+id/editTextEmail_Login"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:hint="Số điện thoại hoặc Email"
+            android:hint="Nhập Email"
             android:padding="12dp"
             android:background="@drawable/input_text"
             android:gravity="left"
@@ -55,6 +56,7 @@
             android:textColor="@color/black"
             android:fontFamily="@font/afacad"/>
         <EditText
+            android:id="@+id/editTextPass_Login"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
